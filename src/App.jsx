@@ -1,28 +1,23 @@
 import "./App.css";
-import Introduction from "./components/Introduction";
-import Navbar from "./components/Navbar";
-import Profile from "./components/Profile";
-import Sidebar from "./components/Sidebar";
-import About from "./components/About";
-import Service from "./components/Service";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import LoginForm from "./components/LoginForm";
+import RegisterForm from "./components/RegisterForm";
+import HomePage from "./components/HomePage";
+import Index from "./components/Index";
 function App() {
   return (
     <>
-      <Navbar />
-      <Sidebar />
-      <div className="ml-[90px] grid grid-cols-1 md:grid-cols-3 ">
-        <div className="col-span-2 p-5 ">
-          <Introduction />
-          <About />
-          <Service />
-          <Footer />
-        </div>
-        <div className="hidden md:block">
-          <Profile />
-        </div>
-      </div>
+      {/* <AuthForm /> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/home" element={<RegisterForm />} />
+          <Route path="/index" element={<Index />} />
+        </Routes>
+      </Router>
     </>
   );
 }

@@ -7,7 +7,7 @@ const Navbar = () => {
     },
     {
       id: 2,
-      name: "SKILLS",
+      name: "Video Pembelajaran",
     },
     {
       id: 3,

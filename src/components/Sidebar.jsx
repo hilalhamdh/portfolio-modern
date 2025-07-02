@@ -1,6 +1,7 @@
 import { IoLogoGithub, IoLogoInstagram, IoLogoLinkedin } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io5";
-
+import { RiLogoutCircleLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div className="w-[90px]  border-r-2 h-screen border-white shadow-xl mt-[90px] fixed flex flex-col justify-around items-center dark:bg-slate-800">
@@ -12,6 +13,13 @@ const Sidebar = () => {
         <IoLogoWhatsapp className="cursor-pointer transition-all ease-in-out hover:scale-110" />
         <IoLogoGithub className="cursor-pointer transition-all ease-in-out hover:scale-110" />
         <IoLogoLinkedin className="cursor-pointer transition-all ease-in-out hover:scale-110" />
+        <Link
+          to="/"
+          className="flex flex-col items-center  cursor-pointer transition-all hover:scale-110"
+        >
+          <RiLogoutCircleLine />
+          <span className="text-[5px]">logout</span>
+        </Link>
       </div>
     </div>
   );
