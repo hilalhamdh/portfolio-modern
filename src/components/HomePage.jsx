@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
@@ -10,18 +12,18 @@ const HomePage = () => {
           teknologi, pemrograman, dan lainnya.
         </p>
         <div className="space-x-4">
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
           >
             Login
-          </a>
-          <a
-            href="/register"
+          </Link>
+          <Link
+            to="/register"
             className="bg-gray-300 text-gray-800 px-6 py-2 rounded hover:bg-gray-400 transition"
           >
             Register
-          </a>
+          </Link>
         </div>
       </div>
     </div>
