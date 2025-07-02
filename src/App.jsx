@@ -5,6 +5,7 @@ import Profile from "./components/Profile";
 import Sidebar from "./components/Sidebar";
 import About from "./components/About";
 import Service from "./components/Service";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Introduction />
           <About />
           <Service />
+          <Footer />
         </div>
         <div className="hidden md:block">
           <Profile />
