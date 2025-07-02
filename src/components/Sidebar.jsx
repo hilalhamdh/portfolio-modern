@@ -4,7 +4,7 @@ import { RiLogoutCircleLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
-    <div className="w-[90px]  border-r-2 h-screen border-white shadow-xl mt-[90px] fixed flex flex-col justify-around items-center dark:bg-slate-800">
+    <div className="w-[90px]  border-r-2 h-screen border-white shadow-xl mt-[90px] fixed flex flex-col justify-around items-center bg-gray-200">
       <h2 className="-rotate-90 text-2xl font-bold tracking-widest  ">
         HOMEPAGE
       </h2>
