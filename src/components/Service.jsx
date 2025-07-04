@@ -24,12 +24,12 @@ const Service = () => {
   ];
   return (
     <div className=" md:px-12 mt-12">
-      <div className="flex items-center">
-        <div className="w-[20px] h-[7px] bg-green-600 rounded-full"></div>
-        <div className="px-3 w-full border-[1px] mx-4 mt-[-2px]"></div>
+      <div className="flex items-center mx-4">
+        <div className="w-[20px] h-[7px] bg-green-600 rounded-full "></div>
+        <div className="px-3 w-full border-[1px] mx-2 md:mx-4 mt-[-2px]"></div>
         <h2 className="text-bold text-2xl">{String.SERVICES}</h2>
-        <div className="px-3 w-full border-[1px] mx-4 mt-[-2px]"></div>
-        <div className="w-[20px] h-[7px] bg-green-600 rounded-full"></div>
+        <div className="px-3 w-full border-[1px] mx-2 mt-[-2px]"></div>
+        <div className="w-[20px] h-[7px] bg-green-600 rounded-full "></div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 mt-16 ">
         {servicesList.map((str) => (
@@ -42,7 +42,7 @@ const Service = () => {
               />
             </div>
             <h2 className="font-bold mt-5">{str.title}</h2>
-            <h2 className="text-gray-500">{str.desc}</h2>
+            <h2 className="text-gray-500 mx-3 md:mx-1">{str.desc}</h2>
             <IoArrowForwardCircle className="text-2xl text-green-500 hover:scale-110 ease-in-out transition-all my-3" />
           </div>
         ))}

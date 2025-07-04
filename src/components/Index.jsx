@@ -9,17 +9,15 @@ import Footer from "./Footer";
 const Index = () => {
   return (
     <div>
-      <Navbar />
       <Sidebar />
-      <div className="ml-[90px] grid grid-cols-1 md:grid-cols-3 ">
-        <div className="col-span-2 p-5 ">
+      <div className="md:ml-[250px] grid grid-cols-1">
+        <div className="col-span-2  ">
+          <Navbar />
           <Introduction />
+
           <About />
           <Service />
           <Footer />
-        </div>
-        <div className="hidden md:block">
-          <Profile />
         </div>
       </div>
     </div>

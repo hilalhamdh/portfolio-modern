@@ -11,11 +11,11 @@ function App() {
       {/* <AuthForm /> */}
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/utama" element={<HomePage />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/register" element={<RegisterForm />} />
-          <Route path="/home" element={<RegisterForm />} />
-          <Route path="/index" element={<Index />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/" element={<Index />} />
         </Routes>
       </Router>
     </>
