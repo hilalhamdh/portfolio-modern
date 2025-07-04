@@ -13,7 +13,7 @@ const LoginForm = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       setMessage("Login berhasil!");
-      navigate("/index");
+      navigate("/");
     } catch (err) {
       setMessage(err.message);
     }
