@@ -49,12 +49,12 @@ const Navbar = () => {
                 <ul className="flex flex-col mx-5  gap-4 font-semibold mt-5 ">
                   <li className="flex px-2 items-center rounded-md gap-3 mr-2 transition-all ease-in-out hover:scale-110 border-b-2 border-gray-400 hover:bg-purple-600 text-gray-700 hover:text-white">
                     <IoHomeOutline />
-                    <a href="/">Home</a>
+                    <a href="/home">Home</a>
                   </li>
 
                   <li className="flex gap-3 mr-2 rounded-md px-2 items-center transition-all ease-in-out hover:scale-110 border-b-2 border-gray-400 text-gray-700 hover:bg-purple-600 hover:text-white ">
                     <MdOutlineVideoSettings />
-                    <a href="">Learning Video</a>
+                    <a href="/videopage">Learning Video</a>
                   </li>
                   <li className="flex gap-3 mr-2 rounded-md px-2 items-center transition-all ease-in-out hover:scale-110 border-b-2 border-gray-400 text-gray-700 hover:bg-purple-600 hover:text-white">
                     <MdOutlineContactMail />

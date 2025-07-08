@@ -1,6 +1,6 @@
 import Introduction from "./Introduction";
 import Navbar from "./Navbar";
-import Profile from "./Profile";
+
 import Sidebar from "./Sidebar";
 import About from "./About";
 import Service from "./Service";
@@ -14,7 +14,6 @@ const Index = () => {
         <div className="col-span-2  ">
           <Navbar />
           <Introduction />
-
           <About />
           <Service />
           <Footer />
