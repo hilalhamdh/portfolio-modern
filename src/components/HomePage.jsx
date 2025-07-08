@@ -27,9 +27,7 @@ const HomePage = () => {
                 alt="Logo"
                 className="w-10 h-10 rounded-full"
               />
-              <h2 className="text-xl font-bold pl-3 text-sky-950">
-                MyCoding Course
-              </h2>
+              <h2 className="text-xl font-bold pl-3 text-sky-950">MyCoding</h2>
             </div>
             <div>
               <ul className="hidden md:flex items-center gap-6 cursor-pointer">
@@ -126,7 +124,7 @@ const HomePage = () => {
                   className="absolute top-3 right-3 w-4 h-4 cursor-pointer text-gray-500 hover:text-red-500"
                 />
                 <h1 className="text-3xl font-bold mb-4 text-gray-800">
-                  Selamat Datang di CourseKu
+                  Selamat Datang di MyCoding
                 </h1>
                 <p className="text-gray-600 mb-6">
                   Platform pembelajaran online terbaik untuk kamu yang ingin
