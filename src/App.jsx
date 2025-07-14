@@ -6,6 +6,7 @@ import RegisterForm from "./LoginPages/RegisterForm";
 import HomePage from "./components/HomePage";
 import Index from "./components/Index";
 import VideoPages from "./pages/VideoPages";
+
 function App() {
   return (
     <>

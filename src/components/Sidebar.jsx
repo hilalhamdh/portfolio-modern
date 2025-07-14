@@ -1,5 +1,9 @@
 import { IoHomeOutline } from "react-icons/io5";
-import { MdOutlineVideoSettings, MdOutlineContactMail } from "react-icons/md";
+import {
+  MdOutlineVideoSettings,
+  MdOutlineContactMail,
+  MdOutlineBookOnline,
+} from "react-icons/md";
 import { GrBook } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import Hilal from "/logo.png";
@@ -24,7 +28,10 @@ const Sidebar = () => {
             <IoHomeOutline />
             <Link to="/home">Home</Link>
           </li>
-
+          <li className="flex gap-3 mr-4 transition-all ease-in-out hover:scale-110 border-b-2  border-gray-400">
+            <MdOutlineBookOnline />
+            <a href="/materipage">Learning Materials</a>
+          </li>
           <li className="flex gap-3 mr-4 transition-all ease-in-out hover:scale-110 border-b-2  border-gray-400">
             <MdOutlineVideoSettings />
             <a href="/videopage">Learning Video</a>

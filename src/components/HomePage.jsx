@@ -3,6 +3,8 @@ import { TfiAlignJustify, TfiClose } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 // import Hilal from "../path/to/hilal.jpg"; // Pastikan kamu sudah import ini
 import CountUp from "react-countup";
+import CardPages from "../pages/CardPages";
+
 const HomePage = () => {
   const [toggle, setToggle] = useState(false); // default false agar menu tertutup
   const [show, setShow] = useState(true);
@@ -123,7 +125,7 @@ const HomePage = () => {
                   onClick={() => setShow(false)}
                   className="absolute top-3 right-3 w-4 h-4 cursor-pointer text-gray-500 hover:text-red-500"
                 />
-                <h1 className="text-3xl font-bold mb-4 text-gray-800">
+                <h1 className="text-3xl font-bold mb- 4 text-gray-800">
                   Selamat Datang di MyCoding
                 </h1>
                 <p className="text-gray-600 mb-6">
@@ -196,6 +198,36 @@ const HomePage = () => {
               <p className="mt-2 text-sm">Tahun Mengedukasi Indonesia</p>
             </div>
           </div>
+        </div>
+      </div>
+      <CardPages />
+      <div className="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" defaultChecked />
+        <div className="collapse-title font-semibold">
+          How do I create an account?
+        </div>
+        <div className="collapse-content text-sm">
+          Click the "Sign Up" button in the top right corner and follow the
+          registration process.
+        </div>
+      </div>
+      <div className="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div className="collapse-title font-semibold">
+          I forgot my password. What should I do?
+        </div>
+        <div className="collapse-content text-sm">
+          Click on "Forgot Password" on the login page and follow the
+          instructions sent to your email.
+        </div>
+      </div>
+      <div className="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div className="collapse-title font-semibold">
+          How do I update my profile information?
+        </div>
+        <div className="collapse-content text-sm">
+          Go to "My Account" settings and select "Edit Profile" to make changes.
         </div>
       </div>
     </>
