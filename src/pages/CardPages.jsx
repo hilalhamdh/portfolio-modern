@@ -35,13 +35,13 @@ const CardPages = () => {
     },
   ];
   return (
-    <div className="mt-6">
+    <div className="mt-6  text-black">
       <div className="flex items-center justify-center">
         <h1 className="text-3xl font-bold text-center ">Paket Belajar</h1>
       </div>
       <div className="grid md:flex grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center  gap-4">
         {card.map((items) => (
-          <div key={items.id} className=" card w-96 bg-base-100 shadow-sm">
+          <div key={items.id} className=" card w-96  shadow-sm bg-gray-300">
             <div className="card-body">
               <span className="badge badge-xs badge-warning">
                 {items.laris}
