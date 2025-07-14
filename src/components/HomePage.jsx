@@ -151,7 +151,7 @@ const HomePage = () => {
           )}
         </div>
       </div>
-      <section className="py-16 px-4 bg-gray-100">
+      <section className="py-16 px-4 bg-gray-100 text-black">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
           <div>
             <h3 className="text-xl font-bold mb-2">Belajar Online</h3>
