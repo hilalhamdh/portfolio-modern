@@ -40,18 +40,18 @@ const CardPages = () => {
     },
   ];
   return (
-    <div className=" bg-white  text-black ">
+    <div className="mt-6 bg-white  text-black ">
       <div className="flex items-center justify-center">
-        <h1 className="text-3xl font-bold text-center mb-5 pt-5 ">
+        <h1 className="text-3xl font-bold text-center mb-5 pt-6 ">
           Paket Belajar
         </h1>
       </div>
       <div className="flex items-center justify-center">
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center  gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center  gap-4">
           {card.map((items) => (
             <div
               key={items.id}
-              className=" card w-96  shadow-sm bg-gray-300 mx-4"
+              className=" card w-96  shadow-sm bg-gray-300 gap-5"
             >
               <div className="card-body">
                 <div className="flex justify-between">
