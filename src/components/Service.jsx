@@ -23,7 +23,7 @@ const Service = () => {
     },
   ];
   return (
-    <div className=" md:px-12 mt-12">
+    <div className=" md:px-12 mt-12 bg-white text-black">
       <div className="flex items-center mx-4">
         <div className="w-[20px] h-[7px] bg-green-600 rounded-full "></div>
         <div className="px-3 w-full border-[1px] mx-2 md:mx-4 mt-[-2px]"></div>
@@ -35,14 +35,15 @@ const Service = () => {
         {servicesList.map((str) => (
           <div
             key={str.id}
-            className="flex flex-col items-center justify-center text-center gap-6"
+            className="flex flex-col items-center justify-center  gap-6 text-center   place-items-center "
           >
-            <img
-              src={str.logo}
-              alt="image"
-              className="h-[90px] w-[90px] p-5 hover:scale-110 transition-all ease-in-out cursor-pointer"
-            />
-
+            <div className="bg-gray-200 rounded-full w-[90px] h-[90px]">
+              <img
+                src={str.logo}
+                alt="image"
+                className="h-[90px] w-[90px] p-5 hover:scale-110 transition-all ease-in-out cursor-pointer"
+              />
+            </div>
             <h2 className="font-bold mt-5">{str.title}</h2>
             <h2 className="text-gray-500 mx-3 md:mx-1">{str.desc}</h2>
             <IoArrowForwardCircle className="text-2xl text-green-500 hover:scale-110 ease-in-out transition-all my-3" />
