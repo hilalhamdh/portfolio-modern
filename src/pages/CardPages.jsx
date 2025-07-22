@@ -46,13 +46,10 @@ const CardPages = () => {
           Paket Belajar
         </h1>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center mx-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center  gap-4">
           {card.map((items) => (
-            <div
-              key={items.id}
-              className=" card w-96  shadow-sm bg-gray-300 gap-5"
-            >
+            <div key={items.id} className=" card w-96  shadow-sm bg-gray-300 ">
               <div className="card-body">
                 <div className="flex justify-between">
                   <h2 className="text-2xl font-bold">{items.name}</h2>
