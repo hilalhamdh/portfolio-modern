@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <div>
       <Sidebar />
-      <div className="md:ml-[250px] grid grid-cols-1 bg-white ">
+      <div className="md:ml-[250px] grid grid-cols-1 bg-gray-200 ">
         <div className="col-span-2  ">
           <Navbar />
           <Introduction />
