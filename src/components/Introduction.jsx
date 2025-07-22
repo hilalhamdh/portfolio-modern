@@ -1,7 +1,7 @@
 import Hilal from "/hil.jpg";
 const Introduction = () => {
   return (
-    <div className="flex items-center flex-col ">
+    <div className="flex items-center flex-col bg-white text-black">
       <div className="border-r-1 border-gray-300 shadow-2xl h-[120px] mt-[-2px]" />
       <div className="w-[10px] h-[10px] bg-green-400 rounded-full"></div>
       <h1 className="mt-5 text-black  tracking-widest font-semibold text-xl">
