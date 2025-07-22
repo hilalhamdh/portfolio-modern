@@ -40,7 +40,7 @@ const CardPages = () => {
     },
   ];
   return (
-    <div className="mt-6 bg-white  text-black mx-5">
+    <div className=" bg-white  text-black mx-5">
       <div className="flex items-center justify-center">
         <h1 className="text-3xl font-bold text-center mb-5 pt-5 ">
           Paket Belajar
