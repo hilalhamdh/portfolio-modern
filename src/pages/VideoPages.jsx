@@ -14,8 +14,11 @@ const VideoPages = () => {
     return matchTag;
   });
   return (
-    <div className="text-black bg-white">
-      <Sidebar />
+    <div className="relative  bg-white text-black">
+      <div className="fixed ">
+        <Sidebar />
+      </div>
+
       <div className="md:ml-[250px] grid grid-cols-1">
         <div className="col-span-2  ">
           <Navbar />
@@ -75,7 +78,7 @@ const VideoPages = () => {
         {filteredBlogs.map((pro) => (
           <div
             key={pro.id}
-            className="cursor-pointer bg-gray-200 p-2 rounded-sm"
+            className="cursor-pointer bg-gray-200 p-2 rounded-sm "
           >
             <p className="text-md px-1">{pro.title}</p>
             <ReactPlayer

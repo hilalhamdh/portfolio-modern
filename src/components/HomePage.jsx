@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <>
       <div
-        className="min-h-screen flex flex-col transition-all ease-in-out"
+        className="min-h-screen flex flex-col transition-all ease-in-out bg-white text-black "
         style={{
           backgroundImage: "url('/bg.jpg')",
           backgroundSize: "cover",
@@ -30,7 +30,9 @@ const HomePage = () => {
                 alt="Logo"
                 className="w-10 h-10 rounded-full"
               />
-              <h2 className="text-xl font-bold pl-3 text-sky-950">MyCoding</h2>
+              <h2 className="text-xl font-bold pl-3 text-sky-950">
+                Creative Course
+              </h2>
             </div>
             <div>
               <ul className="hidden md:flex items-center gap-6 cursor-pointer">
@@ -126,23 +128,23 @@ const HomePage = () => {
                   onClick={() => setShow(false)}
                   className="absolute top-3 right-3 w-4 h-4 cursor-pointer text-gray-500 hover:text-red-500"
                 />
-                <h1 className="text-3xl font-bold mb- 4 text-gray-800">
-                  Selamat Datang di MyCoding
+                <h1 className="text-xl md:text-2xl font-bold mb- 4 text-gray-800">
+                  Selamat Datang di Creative Course
                 </h1>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-6 mt-3">
                   Platform pembelajaran online terbaik untuk kamu yang ingin
                   belajar teknologi, pemrograman, dan lainnya.
                 </p>
                 <div className="space-x-4">
                   <Link
                     to="/login"
-                    className="bg-sky-950 text-white px-6 py-2 rounded hover:bg-sky-700 transition"
+                    className="bg-purple-600 text-white px-3 py-1 rounded hover:bg-sky-700 transition"
                   >
                     Login
                   </Link>
                   <Link
                     to="/register"
-                    className="bg-gray-300 text-gray-800 px-6 py-2 rounded hover:bg-gray-400 transition"
+                    className="bg-gray-300 text-gray-800 px-3 py-1 rounded hover:bg-gray-400 transition"
                   >
                     Register
                   </Link>
