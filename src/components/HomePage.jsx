@@ -205,7 +205,7 @@ const HomePage = () => {
       </div>
       <CardPages className="bg-white" />
 
-      <div className="  p-4 md:px-25 bg-white text-black ">
+      <div className=" p-4 md:px-25 bg-white text-black ">
         <div className=" bg-gray-200 text-black collapse collapse-plus  border border-gray-200">
           <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title font-semibold">
