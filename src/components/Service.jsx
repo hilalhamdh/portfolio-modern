@@ -33,7 +33,10 @@ const Service = () => {
       </div>
       <div className="flex flex-col items-center justify-center mt-16 ">
         {servicesList.map((str) => (
-          <div key={str.id} className="text-center   place-items-center gap-6">
+          <div
+            key={str.id}
+            className="flex flex-col items-center justify-center text-center gap-6"
+          >
             <img
               src={str.logo}
               alt="image"
