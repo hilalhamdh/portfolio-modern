@@ -9,7 +9,7 @@ const CardPages = () => {
         "Pengenalan HTML & CSS",
         "Dasar JavaScript untuk pemula",
       ],
-      harga: "50.000",
+      harga: "25.000",
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const CardPages = () => {
         "Cocok untuk pelajar & pemula tanpa pengalaman",
         "Proyek akhir: Website statis sederhana",
       ],
-      harga: "100.000",
+      harga: "50.000",
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const CardPages = () => {
         "Cocok untuk pelajar & pemula tanpa pengalaman",
         "Proyek akhir: Website statis sederhana",
       ],
-      harga: "150.000",
+      harga: "75.000",
     },
   ];
   return (
