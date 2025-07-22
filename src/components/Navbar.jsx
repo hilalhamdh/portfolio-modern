@@ -6,8 +6,14 @@ import Hilal from "/logo.png";
 import { GrBook } from "react-icons/gr";
 import { BiBell } from "react-icons/bi";
 import { IoHomeOutline } from "react-icons/io5";
-import { MdOutlineVideoSettings, MdOutlineContactMail } from "react-icons/md";
+import {
+  MdOutlineVideoSettings,
+  MdOutlineContactMail,
+  MdOutlineBookOnline,
+} from "react-icons/md";
 import { Link } from "react-router-dom";
+import { BiLogOut } from "react-icons/bi";
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [query, setQuery] = useState("");
@@ -51,7 +57,10 @@ const Navbar = () => {
                     <IoHomeOutline />
                     <a href="/home">Home</a>
                   </li>
-
+                  <li className="flex gap-3 mr-2 rounded-md px-2 items-center transition-all ease-in-out hover:scale-110 border-b-2 border-gray-400 text-gray-700 hover:bg-purple-600 hover:text-white ">
+                    <MdOutlineBookOnline />
+                    <Link to="/materipage">Learning Materials</Link>
+                  </li>
                   <li className="flex gap-3 mr-2 rounded-md px-2 items-center transition-all ease-in-out hover:scale-110 border-b-2 border-gray-400 text-gray-700 hover:bg-purple-600 hover:text-white ">
                     <MdOutlineVideoSettings />
                     <Link to="/videopage">Learning Video</Link>
@@ -60,15 +69,11 @@ const Navbar = () => {
                     <MdOutlineContactMail />
                     <a href="contact">Contact Us</a>
                   </li>
+                  <li className="flex gap-3 mr-2 rounded-md px-2 items-center transition-all ease-in-out hover:scale-110 border-b-2 border-gray-400 text-gray-700 hover:bg-purple-600 hover:text-white">
+                    <BiLogOut />
+                    <a href="contact">Logout</a>
+                  </li>
                 </ul>
-                <div className="flex items-center mt-[300px] border-b-2 border-gray-200">
-                  <button
-                    type="submit"
-                    className="w-50 h-8 bg-gray-600 text-white rounded-md text-center "
-                  >
-                    <Link to="/utama">Logout</Link>
-                  </button>
-                </div>
               </div>
             </div>
           )}

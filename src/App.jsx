@@ -7,6 +7,7 @@ import HomePage from "./components/HomePage";
 import Index from "./components/Index";
 import VideoPages from "./pages/VideoPages";
 import ForgotPassword from "./LoginPages/ForgotPassword";
+import MateriPages from "./pages/MateriPages";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/register" element={<RegisterForm />} />
-          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/materipage" element={<MateriPages />} />
           <Route path="/home" element={<Index />} />
           <Route path="/videopage" element={<VideoPages />} />
           <Route path="/forgotpass" element={<ForgotPassword />} />

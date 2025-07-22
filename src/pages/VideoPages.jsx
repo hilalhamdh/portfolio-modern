@@ -21,13 +21,13 @@ const VideoPages = () => {
           <Navbar />
         </div>
       </div>
-      <div className=" mt-8">
+      <div className=" mt-10">
         <h1 className="text-center text-3xl font-bold ">VIDEOS</h1>
       </div>
-      <div className="flex items-center justify-center gap-4  mt-6 mb-10">
+      <div className="px-2 grid grid-cols-3 md:flex text-sm items-center justify-center gap-4  mt-6 mb-10">
         <button
           onClick={() => setFilterTag("All")}
-          className={`px-4 py-2 rounded ${
+          className={`px-2 md:px-4 py-2 rounded ${
             filterTag === "All" ? "bg-red-500 text-white" : "bg-gray-200"
           } cursor-pointer  hover:scale-110 `}
         >
@@ -35,7 +35,7 @@ const VideoPages = () => {
         </button>
         <button
           onClick={() => setFilterTag("ReactJs")}
-          className={`px-4 py-2 rounded ${
+          className={`px-2 md:px-4 py-2 rounded ${
             filterTag === "ReactJs" ? "bg-red-500 text-white" : "bg-gray-200"
           } cursor-pointer  hover:scale-110 `}
         >
@@ -43,7 +43,7 @@ const VideoPages = () => {
         </button>
         <button
           onClick={() => setFilterTag("Codeigniter")}
-          className={`px-4 py-2 rounded ${
+          className={`px-2 md:px-4 py-2 rounded ${
             filterTag === "Codeigniter"
               ? "bg-red-500 text-white"
               : "bg-gray-200"
@@ -53,7 +53,7 @@ const VideoPages = () => {
         </button>
         <button
           onClick={() => setFilterTag("Github")}
-          className={`px-4 py-2 rounded ${
+          className={`px-2 md:px-4 py-2 rounded ${
             filterTag === "Github" ? "bg-red-500 text-white" : "bg-gray-200"
           } cursor-pointer  hover:scale-110 `}
         >
@@ -61,7 +61,7 @@ const VideoPages = () => {
         </button>
         <button
           onClick={() => setFilterTag("Tailwindcss")}
-          className={`px-4 py-2 rounded ${
+          className={`px-2 md:px-4 py-2 rounded ${
             filterTag === "Tailwindcss"
               ? "bg-red-500 text-white"
               : "bg-gray-200"
