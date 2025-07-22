@@ -34,6 +34,12 @@ const Service = () => {
       <div className="flex flex-col items-center justify-center mt-16 ">
         {servicesList.map((str) => (
           <div key={str.id} className="text-center   place-items-center gap-6">
+            <img
+              src={str.logo}
+              alt="image"
+              className="h-[90px] w-[90px] p-5 hover:scale-110 transition-all ease-in-out cursor-pointer"
+            />
+
             <h2 className="font-bold mt-5">{str.title}</h2>
             <h2 className="text-gray-500 mx-3 md:mx-1">{str.desc}</h2>
             <IoArrowForwardCircle className="text-2xl text-green-500 hover:scale-110 ease-in-out transition-all my-3" />
