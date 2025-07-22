@@ -3,7 +3,7 @@ import String from "../shared/String";
 
 const About = () => {
   return (
-    <div className="mt-12 px-5  md:px-44 text-center flex flex-col items-center">
+    <div className="mt-12 px-5  md:px-44 text-center flex flex-col items-center text-black bg-white">
       <h2 className="font-bold text-[20px] md:text-[40px] pb-10">
         {String.ABOUT_HEADING}
       </h2>

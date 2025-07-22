@@ -19,12 +19,12 @@ const Navbar = () => {
           {!toggle ? (
             <TfiAlignJustify
               onClick={() => setToggle(true)}
-              className="w-6 h-6 cursor-pointer float-left r"
+              className="w-6 h-6 cursor-pointer float-left text-black "
             />
           ) : (
             <TfiClose
               onClick={() => setToggle(false)}
-              className="hidden  w-6 h-6 cursor-pointer float-right "
+              className="hidden  w-6 h-6 cursor-pointer float-right text-black "
             />
           )}
 
@@ -37,7 +37,7 @@ const Navbar = () => {
                 />
                 <TfiClose
                   onClick={() => setToggle(false)}
-                  className="flex  w-4 h-4 cursor-pointer   "
+                  className="flex  w-4 h-4 cursor-pointer text-black   "
                 />
               </div>
 

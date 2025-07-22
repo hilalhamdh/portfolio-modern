@@ -28,7 +28,7 @@ const LoginForm = () => {
     >
       <div className="flex items-center justify-center px-4 mt-30">
         <div className=" max-w-sm mx-auto p-4  bg-white shadow rounded ">
-          <h2 className="text-xl font-bold mb-4">Login</h2>
+          <h2 className="text-xl font-bold mb-4 text-purple-600">Login</h2>
           <form onSubmit={handleLogin}>
             <input
               type="email"
@@ -48,7 +48,7 @@ const LoginForm = () => {
             />
             <button
               type="submit"
-              className="bg-blue-500 text-white w-full py-2 rounded"
+              className="bg-purple-600 text-white w-full py-2 rounded"
             >
               Login
             </button>
