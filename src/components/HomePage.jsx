@@ -216,7 +216,7 @@ const HomePage = () => {
             pendaftaran.
           </div>
         </div>
-        <div className="text-black collapse collapse-plus bg-gray-200 border border-gray-200">
+        <div className="mt-2 text-black collapse collapse-plus bg-gray-200 border border-gray-200">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title font-semibold">
             Saya lupa kata sandi. Apa yang harus saya lakukan?
