@@ -31,14 +31,14 @@ const Service = () => {
         <div className="px-3 w-full border-[1px] mx-2 mt-[-2px]"></div>
         <div className="w-[20px] h-[7px] bg-green-600 rounded-full "></div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="">
         <div className="grid grid-cols-1 md:grid-cols-3 mt-16 ">
           {servicesList.map((str) => (
             <div
               key={str.id}
               className="text-center   place-items-center gap-6"
             >
-              <div className="bg-gray-200 rounded-full w-[90px] h-[90px]">
+              <div className="flex items-center justify-center bg-gray-200 rounded-full w-[90px] h-[90px]">
                 <img
                   src={str.logo}
                   alt="image"
