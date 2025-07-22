@@ -35,7 +35,7 @@ const Service = () => {
         {servicesList.map((str) => (
           <div
             key={str.id}
-            className="flex flex-col items-center justify-center  gap-6 text-center   place-items-center "
+            className="flex flex-col items-center justify-center  gap-4 text-center   place-items-center "
           >
             <div className="bg-gray-200 rounded-full w-[90px] h-[90px]">
               <img
@@ -44,9 +44,9 @@ const Service = () => {
                 className="h-[90px] w-[90px] p-5 hover:scale-110 transition-all ease-in-out cursor-pointer"
               />
             </div>
-            <h2 className="font-bold mt-5">{str.title}</h2>
+            <h2 className="font-bold mt-2">{str.title}</h2>
             <h2 className="text-gray-500 mx-3 md:mx-1">{str.desc}</h2>
-            <IoArrowForwardCircle className="text-2xl text-green-500 hover:scale-110 ease-in-out transition-all my-3" />
+            <IoArrowForwardCircle className="text-2xl text-green-500 hover:scale-110 ease-in-out transition-all my-1" />
           </div>
         ))}
       </div>

@@ -3,8 +3,8 @@ import String from "../shared/String";
 
 const About = () => {
   return (
-    <div className="mt-12 px-5  md:px-44 text-center flex flex-col items-center text-black bg-gray-200">
-      <h2 className="font-bold text-[20px] md:text-[40px] pb-10">
+    <div className="mt-8 px-5  md:px-44 text-center flex flex-col items-center text-black bg-gray-200">
+      <h2 className="font-bold text-[14px] md:text-[40px] pb-10">
         {String.ABOUT_HEADING}
       </h2>
       <FaQuoteLeft className="bg-green-600 rounded-full text-[44px] text-white p-3" />
