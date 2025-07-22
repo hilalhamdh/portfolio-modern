@@ -14,7 +14,7 @@ const VideoPages = () => {
     return matchTag;
   });
   return (
-    <div>
+    <div className="text-black bg-white">
       <Sidebar />
       <div className="md:ml-[250px] grid grid-cols-1">
         <div className="col-span-2  ">
