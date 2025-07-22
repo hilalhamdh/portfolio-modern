@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className="">
-      <div className="flex  justify-between items-center border-b-1 h-20 border-b-white  bg-gray-200">
+      <div className="flex  justify-between items-center border-b-1 h-20 border-b-white shadow-lg  bg-gray-200">
         <div className="md:hidden absolute  top-7  mx-2 ">
           {!toggle ? (
             <TfiAlignJustify
@@ -54,7 +54,7 @@ const Navbar = () => {
 
                   <li className="flex gap-3 mr-2 rounded-md px-2 items-center transition-all ease-in-out hover:scale-110 border-b-2 border-gray-400 text-gray-700 hover:bg-purple-600 hover:text-white ">
                     <MdOutlineVideoSettings />
-                    <a href="/videopage">Learning Video</a>
+                    <Link to="/videopage">Learning Video</Link>
                   </li>
                   <li className="flex gap-3 mr-2 rounded-md px-2 items-center transition-all ease-in-out hover:scale-110 border-b-2 border-gray-400 text-gray-700 hover:bg-purple-600 hover:text-white">
                     <MdOutlineContactMail />

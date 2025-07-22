@@ -60,6 +60,9 @@ const LoginForm = () => {
               Register
             </Link>
           </p>
+          <p className="text-xs text-blue-400 pt-3">
+            <Link to="/forgotpass">Lupa Password?</Link>
+          </p>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { TfiAlignJustify, TfiClose } from "react-icons/tfi";
 import { Link } from "react-router-dom";
 // import Hilal from "../path/to/hilal.jpg"; // Pastikan kamu sudah import ini
@@ -176,25 +176,25 @@ const HomePage = () => {
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
               <h2 className="text-4xl font-bold text-yellow-400">
-                <CountUp end={270} duration={2} />+
+                <CountUp end={270} duration={4} />+
               </h2>
               <p className="mt-2 text-sm">Kota di Indonesia</p>
             </div>
             <div>
               <h2 className="text-4xl font-bold text-yellow-400">
-                <CountUp end={150000} duration={3} separator="." />+
+                <CountUp end={150000} duration={4} separator="." />+
               </h2>
               <p className="mt-2 text-sm">Member yang sudah bergabung</p>
             </div>
             <div>
               <h2 className="text-4xl font-bold text-yellow-400">
-                <CountUp end={100} duration={2} />+
+                <CountUp end={100} duration={4} />+
               </h2>
               <p className="mt-2 text-sm">Client yang bekerja sama</p>
             </div>
             <div>
               <h2 className="text-4xl font-bold text-yellow-400">
-                <CountUp end={5} duration={2} />
+                <CountUp end={5} duration={4} />
               </h2>
               <p className="mt-2 text-sm">Tahun Mengedukasi Indonesia</p>
             </div>
@@ -207,31 +207,21 @@ const HomePage = () => {
         <div className="collapse collapse-plus bg-base-100 border border-base-300">
           <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title font-semibold">
-            How do I create an account?
+            Bagaimana cara buat akun?
           </div>
           <div className="collapse-content text-sm">
-            Click the "Sign Up" button in the top right corner and follow the
-            registration process.
+            Klik tombol "Daftar" di pojok kanan atas dan ikuti proses
+            pendaftaran.
           </div>
         </div>
         <div className="collapse collapse-plus bg-base-100 border border-base-300">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title font-semibold">
-            I forgot my password. What should I do?
+            Saya lupa kata sandi. Apa yang harus saya lakukan?
           </div>
           <div className="collapse-content text-sm">
-            Click on "Forgot Password" on the login page and follow the
-            instructions sent to your email.
-          </div>
-        </div>
-        <div className="collapse collapse-plus bg-base-100 border border-base-300">
-          <input type="radio" name="my-accordion-3" />
-          <div className="collapse-title font-semibold">
-            How do I update my profile information?
-          </div>
-          <div className="collapse-content text-sm">
-            Go to "My Account" settings and select "Edit Profile" to make
-            changes.
+            Klik "Lupa Kata Sandi" di halaman login dan ikuti petunjuk yang
+            dikirimkan ke email Anda.
           </div>
         </div>
       </div>

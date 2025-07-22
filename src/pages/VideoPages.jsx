@@ -34,9 +34,9 @@ const VideoPages = () => {
           All
         </button>
         <button
-          onClick={() => setFilterTag("React")}
+          onClick={() => setFilterTag("ReactJs")}
           className={`px-4 py-2 rounded ${
-            filterTag === "React" ? "bg-red-500 text-white" : "bg-gray-200"
+            filterTag === "ReactJs" ? "bg-red-500 text-white" : "bg-gray-200"
           } cursor-pointer  hover:scale-110 `}
         >
           ReactJs
@@ -51,31 +51,43 @@ const VideoPages = () => {
         >
           Codeigniter
         </button>
+        <button
+          onClick={() => setFilterTag("Github")}
+          className={`px-4 py-2 rounded ${
+            filterTag === "Github" ? "bg-red-500 text-white" : "bg-gray-200"
+          } cursor-pointer  hover:scale-110 `}
+        >
+          Github
+        </button>
+        <button
+          onClick={() => setFilterTag("Tailwindcss")}
+          className={`px-4 py-2 rounded ${
+            filterTag === "Tailwindcss"
+              ? "bg-red-500 text-white"
+              : "bg-gray-200"
+          } cursor-pointer  hover:scale-110 `}
+        >
+          Tailwindcss
+        </button>
       </div>
 
-      <div className=" mx-6 md:ml-[300px] md:mx-10 pt-10 grid grid-cols-1  lg:grid-cols-3 gap-3 md:gap-6">
-        {filteredBlogs.slice(1, 10).map((pro) => (
-          <div key={pro.id} className="cursor-pointer">
+      <div className=" mx-6 md:ml-[300px] md:mx-10 pt-3 grid grid-cols-1  lg:grid-cols-3 gap-3 md:gap-6">
+        {filteredBlogs.map((pro) => (
+          <div
+            key={pro.id}
+            className="cursor-pointer bg-gray-200 p-2 rounded-sm"
+          >
+            <p className="text-md px-1">{pro.title}</p>
             <ReactPlayer
-              url={pro.url}
+              src={pro.url}
               width="100%"
-              height="360px"
+              height="300px"
               controls={true} // Menampilkan kontrol play, pause, dll
             />
 
             <p className="mt-3 text-red-400">{pro.tag}</p>
-            <h2 className="mt-3 font-bold">{pro.title}</h2>
-            <p className="line-clamp-3 text-justify pt-3 text-gray-500">
-              {pro.desc}
-            </p>
           </div>
         ))}
-      </div>
-      <div className=" flex box items-center justify-items-center  bg-white h-[355px] w-[375px] md:w-[650px] px-2 pb-4 ">
-        <ReactPlayer
-          url=" https://youtu.be/OuEwT015NJE?si=a1-8kz9cdRZrKhqO"
-          className="w-full h-[300px] max-w-full pt-4"
-        />
       </div>
     </div>
   );

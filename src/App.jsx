@@ -6,6 +6,7 @@ import RegisterForm from "./LoginPages/RegisterForm";
 import HomePage from "./components/HomePage";
 import Index from "./components/Index";
 import VideoPages from "./pages/VideoPages";
+import ForgotPassword from "./LoginPages/ForgotPassword";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/home" element={<Index />} />
           <Route path="/videopage" element={<VideoPages />} />
+          <Route path="/forgotpass" element={<ForgotPassword />} />
         </Routes>
       </Router>
     </>
