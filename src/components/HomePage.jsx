@@ -203,7 +203,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <CardPages className="bg-white" />
+      <CardPages />
 
       <div className=" p-4 md:px-25 bg-white text-black ">
         <div className=" bg-gray-200 text-black collapse collapse-plus  border border-gray-200">
