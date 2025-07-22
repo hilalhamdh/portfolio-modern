@@ -205,8 +205,8 @@ const HomePage = () => {
       </div>
       <CardPages />
 
-      <div className=" mt-5 p-4 md:px-25 bg-gray-200 text-black ">
-        <div className="collapse collapse-plus bg-base-100 border border-base-300">
+      <div className=" mt-5 p-4 md:px-25 bg-white text-black ">
+        <div className=" bg-gray-200 text-black collapse collapse-plus  border border-base-300">
           <input type="radio" name="my-accordion-3" defaultChecked />
           <div className="collapse-title font-semibold">
             Bagaimana cara buat akun?
@@ -216,7 +216,7 @@ const HomePage = () => {
             pendaftaran.
           </div>
         </div>
-        <div className="collapse collapse-plus bg-base-100 border border-base-300">
+        <div className="text-black collapse collapse-plus bg-gray-200 border border-base-300">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title font-semibold">
             Saya lupa kata sandi. Apa yang harus saya lakukan?
