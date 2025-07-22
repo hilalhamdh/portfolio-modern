@@ -42,8 +42,8 @@ const CardPages = () => {
   return (
     <div className="mt-6 bg-white  text-black  ">
       <div className="flex items-center justify-center">
-        <h1 className="text-3xl font-bold text-center mb-5 pt-6 ">
-          Paket Belajar
+        <h1 className="text-3xl font-bold text-center mb-5 pt-6 border-b-3 border-purple-400  ">
+          Paket <span className="text-purple-600 ">Belajar</span>
         </h1>
       </div>
       <div className="flex items-center justify-center ">
@@ -55,7 +55,7 @@ const CardPages = () => {
             >
               <div className="card-body">
                 <div className="flex justify-between">
-                  <h2 className="text-2xl font-bold">{items.name}</h2>
+                  <h2 className="text-xl font-bold">{items.name}</h2>
                   <span className="text-sm">Rp.{items.harga}</span>
                 </div>
                 <ul className="mt-6 flex flex-col  gap-2 text-xs">
@@ -119,7 +119,7 @@ const CardPages = () => {
                 </ul>
 
                 <div className="mt-6">
-                  <button className="btn btn-primary btn-block">
+                  <button className="btn bg-purple-600 text-white btn-block">
                     Beli Paket
                   </button>
                 </div>
