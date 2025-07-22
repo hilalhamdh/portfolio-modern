@@ -47,7 +47,7 @@ const CardPages = () => {
         </h1>
       </div>
       <div className="flex items-center justify-center">
-        <div className="mx-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center  gap-4">
+        <div className="px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center  gap-4">
           {card.map((items) => (
             <div key={items.id} className=" card w-96  shadow-sm bg-gray-300">
               <div className="card-body">
