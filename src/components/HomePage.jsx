@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 import CardPages from "../pages/CardPages";
 import Footer from "./Footer";
+import Kategori from "./Kategori";
 
 const HomePage = () => {
   const [toggle, setToggle] = useState(false); // default false agar menu tertutup
@@ -203,6 +204,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <Kategori />
       <CardPages />
 
       <div className=" p-4 md:px-25 bg-white text-black ">
