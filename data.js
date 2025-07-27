@@ -37,4 +37,25 @@ export const product =[
     },
     
 
-]
+];
+
+export const card = [
+    {
+      id: 1,
+      image: "/o.jpg",
+      title: "Basic Programming",
+      desc: "Totorial Dasar-dasar programan menggunakan html,css dan masih banyak lagi",
+    },
+    {
+      id: 2,
+      image: "/g.jpg",
+      title: "Web Programming",
+      desc: "Totorial Dasar-dasar programan menggunakan html,css dan masih banyak lagi",
+    },
+    {
+      id: 3,
+      image: "/d.jpg",
+      title: "Tutorial Lainnya",
+      desc: "Totorial Dasar-dasar programan menggunakan html,css dan masih banyak lagi",
+    },
+  ];

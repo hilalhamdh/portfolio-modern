@@ -6,6 +6,8 @@ import CountUp from "react-countup";
 import CardPages from "../pages/CardPages";
 import Footer from "./Footer";
 import Kategori from "./Kategori";
+import Api from "../pages/api";
+import Newsletter from "../pages/Newsletter";
 
 const HomePage = () => {
   const [toggle, setToggle] = useState(false); // default false agar menu tertutup
@@ -49,7 +51,7 @@ const HomePage = () => {
                   to="/login"
                   className="bg-sky-950 text-white px-6 py-2 rounded hover:bg-sky-700 transition-all"
                 >
-                  Login
+                  Member
                 </Link>
               </div>
 
@@ -206,6 +208,7 @@ const HomePage = () => {
       </div>
       <Kategori />
       <CardPages />
+      <Newsletter />
 
       <div className=" p-4 md:px-25 bg-white text-black ">
         <div className=" bg-gray-200 text-black collapse collapse-plus  border border-gray-200">

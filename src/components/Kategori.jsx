@@ -1,26 +1,8 @@
+import { card } from "../../data";
+
 const Kategori = () => {
-  const card = [
-    {
-      id: 1,
-      image: "/o.jpg",
-      title: "Basic Programming",
-      desc: "Totorial Dasar-dasar programan menggunakan html,css dan masih banyak lagi",
-    },
-    {
-      id: 2,
-      image: "/g.jpg",
-      title: "Web Programming",
-      desc: "Totorial Dasar-dasar programan menggunakan html,css dan masih banyak lagi",
-    },
-    {
-      id: 3,
-      image: "/d.jpg",
-      title: "Tutorial Lainnya",
-      desc: "Totorial Dasar-dasar programan menggunakan html,css dan masih banyak lagi",
-    },
-  ];
   return (
-    <div className="mt-16 bg-gray-white text-black mx-2  md:mx-25 pb-3">
+    <div className="mt-16 bg-gray-white bg-white text-black mx-2  md:mx-25 pb-3">
       <div className="">
         <h3 className="text-md font-bold text-purple-600 pb-3">KATEGORI</h3>
         <h1 className="text-3xl font-bold">Mau Belajar Apa Hari Ini?</h1>

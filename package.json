@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/vite": "^4.1.11",
+    "axios": "^1.11.0",
     "firebase": "^11.10.0",
     "react": "^19.0.0",
     "react-countup": "^6.5.3",

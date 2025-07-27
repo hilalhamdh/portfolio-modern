@@ -1,131 +1,563 @@
+import Robo from "/robo.png";
 const CardPages = () => {
-  const card = [
-    {
-      id: 1,
-      name: "Paket Pemula ",
-      laris: "Most Populer",
-      desc: [
-        "Belajar logika dasar pemrograman",
-        "Pengenalan HTML & CSS",
-        "Dasar JavaScript untuk pemula",
-      ],
-      harga: "25.000",
-    },
-    {
-      id: 2,
-      name: "Paket Menengah",
-      desc: [
-        "Belajar logika dasar pemrograman",
-        "Pengenalan HTML & CSS",
-        "Dasar JavaScript untuk pemula",
-        "Belajar Github",
-        "Cocok untuk pelajar & pemula tanpa pengalaman",
-        "Proyek akhir: Website statis sederhana",
-      ],
-      harga: "50.000",
-    },
-    {
-      id: 3,
-      name: "Paket Profesional",
-      desc: [
-        "Belajar logika dasar pemrograman",
-        "Pengenalan HTML & CSS",
-        "Dasar JavaScript untuk pemula",
-        "Belajar Github",
-        "Dasar ReactJs",
-        "Cocok untuk pelajar & pemula tanpa pengalaman",
-        "Proyek akhir: Website statis sederhana",
-      ],
-      harga: "75.000",
-    },
-  ];
+  //   {
+  //     id: 1,
+  //     name: "Paket Pemula ",
+  //     laris: "Most Populer",
+  //     desc: [
+  //       "Belajar logika dasar pemrograman",
+  //       "Pengenalan HTML & CSS",
+  //       "Dasar JavaScript untuk pemula",
+  //     ],
+  //     harga: "25.000",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Paket Menengah",
+  //     desc: [
+  //       "Belajar logika dasar pemrograman",
+  //       "Pengenalan HTML & CSS",
+  //       "Dasar JavaScript untuk pemula",
+  //       "Belajar Github",
+  //       "Cocok untuk pelajar & pemula tanpa pengalaman",
+  //       "Proyek akhir: Website statis sederhana",
+  //     ],
+  //     harga: "50.000",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Paket Profesional",
+  //     desc: [
+  //       "Belajar logika dasar pemrograman",
+  //       "Pengenalan HTML & CSS",
+  //       "Dasar JavaScript untuk pemula",
+  //       "Belajar Github",
+  //       "Dasar ReactJs",
+  //       "Cocok untuk pelajar & pemula tanpa pengalaman",
+  //       "Proyek akhir: Website statis sederhana",
+  //     ],
+  //     harga: "75.000",
+  //   },
+  // ];
   return (
-    <div className="mt-6 bg-white  text-black  ">
+    <div className=" mt-16 mb-10 bg-white  text-black  ">
       <div className="flex items-center justify-center">
-        <h1 className="text-3xl font-bold text-center mb-5 pt-6 border-b-3 border-purple-400  ">
-          Paket <span className="text-purple-600 ">Belajar</span>
-        </h1>
-      </div>
-      <div className="flex items-center justify-center ">
-        <div className="grid grid-cols-1  lg:grid-cols-3 items-center justify-center  gap-7">
-          {card.map((items) => (
-            <div
-              key={items.id}
-              className=" card w-[350px] md:w-96  shadow-sm bg-gray-300 "
-            >
-              <div className="card-body">
-                <div className="flex justify-between">
-                  <h2 className="text-xl font-bold">{items.name}</h2>
-                  <span className="text-sm">Rp.{items.harga}</span>
-                </div>
-                <ul className="mt-6 flex flex-col  gap-2 text-xs">
-                  {Array.isArray(items.desc) ? (
-                    items.desc.map((point, index) => (
-                      <li key={index}>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="size-4 me-2 inline-block text-success"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        <span>{point}</span>
-                      </li>
-                    ))
-                  ) : items.desc ? (
-                    <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="size-4 me-2 inline-block text-success"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <span>{items.desc}</span>
-                    </li>
-                  ) : (
-                    <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="size-4 me-2 inline-block text-warning"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <span>Deskripsi belum tersedia</span>
-                    </li>
-                  )}
-                </ul>
+        <div className="flex flex-row px-6 md:px-0 items-center justify-center">
+          <h1 className="text-3xl font-bold text-center mb-5 pt-6 border-b-3 border-purple-400  ">
+            Paket <span className="text-purple-600 ">Belajar</span>
+          </h1>
 
-                <div className="mt-6">
-                  <button className="btn bg-purple-600 text-white btn-block">
-                    Beli Paket
-                  </button>
-                </div>
-              </div>
+          <img src={Robo} className="w-[70px] ml-5 animate-bounce" />
+        </div>
+      </div>
+      <div className="mx-6 md:flex-row items-center justify-center gap-4 grid grid-col-1 md:grid-col-3">
+        <div className="card w-96 bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
+          <div className="card-body">
+            <span className="badge badge-xs badge-warning">Most Popular</span>
+            <div className="flex justify-between">
+              <h2 className="text-xl font-bold">Premium</h2>
+              <span className="text-md">Rp.25.000</span>
             </div>
-          ))}
+            <ul className="mt-6 flex flex-col gap-2 text-xs">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar logika dasar pemrograman</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Pengenalan HTML & CSS</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar Dasar JavaScript </span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar Github</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Proyek akhir: Website statis sederhana</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span> Cocok untuk pelajar & pemula tanpa pengalaman</span>
+              </li>
+
+              <li className="opacity-50">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-base-content/50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span className="line-through">Belajar Dasar Tailwindcss</span>
+              </li>
+              <li className="opacity-50">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-base-content/50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span className="line-through">Belajar Dasar Bootstrap 5</span>
+              </li>
+              <li className="opacity-50">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-base-content/50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span className="line-through">Belajar Dasar ReactJs</span>
+              </li>
+            </ul>
+            <div className="mt-6">
+              <button className="btn bg-purple-600 text-white btn-block">
+                Beli Paket
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-96 bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
+          <div className="card-body">
+            <div className="flex justify-between">
+              <h2 className="text-xl font-bold">Premium</h2>
+              <span className="text-md">Rp.50.000</span>
+            </div>
+            <ul className="mt-6 flex flex-col gap-2 text-xs">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar logika dasar pemrograman</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Pengenalan HTML & CSS</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar Dasar JavaScript </span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar Github</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar Tailwindcss</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar Bootstrap 5</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Proyek akhir: Website statis sederhana</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Cocok untuk pelajar & pemula tanpa pengalaman</span>
+              </li>
+              <li className="opacity-50">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-base-content/50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span className="line-through">Belajar Dasar ReactJs</span>
+              </li>
+            </ul>
+            <div className="mt-6">
+              <button className="btn bg-purple-600 text-white btn-block">
+                Beli Paket
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="card w-96 bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
+          <div className="card-body">
+            <div className="flex justify-between">
+              <h2 className="text-xl font-bold">Premium</h2>
+              <span className="text-md">Rp.75.000</span>
+            </div>
+            <ul className="mt-6 flex flex-col gap-2 text-xs">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar logika dasar pemrograman</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Pengenalan HTML & CSS</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Dasar JavaScript untuk pemula</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar Github</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar Tailwindcss</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar Bootstrap</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Belajar Dasar ReactJs</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>Proyek akhir: Website statis sederhana</span>
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="size-4 me-2 inline-block text-success"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span> Cocok untuk pelajar & pemula tanpa pengalaman</span>
+              </li>
+            </ul>
+            <div className="mt-6">
+              <button className="btn bg-purple-600 text-white btn-block">
+                Beli Paket
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
