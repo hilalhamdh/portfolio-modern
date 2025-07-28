@@ -8,10 +8,11 @@ import Footer from "./Footer";
 import Kategori from "./Kategori";
 import { SlBasketLoaded } from "react-icons/sl";
 import Newsletter from "../pages/Newsletter";
-
+import { useSelector } from "react-redux";
 const HomePage = () => {
   const [toggle, setToggle] = useState(false); // default false agar menu tertutup
   const [show, setShow] = useState(true);
+  const cartItems = useSelector((state) => state.cart.items);
 
   return (
     <>
@@ -46,9 +47,16 @@ const HomePage = () => {
 
             <div className="flex items-center space-x-4">
               {/* Desktop Login Button */}
-              <Link to="cartpages">
-                <SlBasketLoaded size={30} />
-              </Link>
+              <div className="relative">
+                <Link to="cartpages">
+                  <SlBasketLoaded size={30} />
+                  {cartItems.length > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                      {cartItems.length}
+                    </span>
+                  )}
+                </Link>
+              </div>
 
               <div className="hidden md:block">
                 <Link
