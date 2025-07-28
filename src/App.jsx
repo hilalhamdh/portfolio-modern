@@ -11,7 +11,7 @@ import MateriPages from "./pages/MateriPages";
 
 function App() {
   return (
-    <>
+    <div className="bg-white">
       {/* <AuthForm /> */}
       <Router>
         <Routes>
@@ -24,7 +24,7 @@ function App() {
           <Route path="/forgotpass" element={<ForgotPassword />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 

@@ -6,7 +6,7 @@ import CountUp from "react-countup";
 import CardPages from "../pages/CardPages";
 import Footer from "./Footer";
 import Kategori from "./Kategori";
-import Api from "../pages/api";
+
 import Newsletter from "../pages/Newsletter";
 
 const HomePage = () => {
@@ -175,7 +175,7 @@ const HomePage = () => {
       </section>
 
       {/* Section tambahan */}
-      <div className="text-center bg-gray-300 text-white font-semibold text-lg ">
+      <div className="text-center bg-white  ">
         <div className="bg-sky-950 text-white py-8">
           <h1 className="pb-6 text-2xl">Member yang sudah bergabung </h1>
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">

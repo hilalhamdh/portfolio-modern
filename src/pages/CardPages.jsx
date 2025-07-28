@@ -40,7 +40,7 @@ const CardPages = () => {
   //   },
   // ];
   return (
-    <div className=" mt-16 mb-10 bg-white  text-black  ">
+    <div className=" mx-auto mt-16 mb-10 bg-white  text-black  ">
       <div className="flex items-center justify-center">
         <div className="flex flex-row px-6 md:px-0 items-center justify-center">
           <h1 className="text-3xl font-bold text-center mb-5 pt-6 border-b-3 border-purple-400  ">
@@ -50,8 +50,8 @@ const CardPages = () => {
           <img src={Robo} className="w-[70px] ml-5 animate-bounce" />
         </div>
       </div>
-      <div className="mx-6 md:flex-row items-center justify-center gap-4 grid grid-col-1 md:grid-col-3">
-        <div className="card w-96 bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
+      <div className=" md:flex  gap-4 grid grid-col-1 md:grid-col-3">
+        <div className="mx-4 card max-w-sm bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
           <div className="card-body">
             <span className="badge badge-xs badge-warning">Most Popular</span>
             <div className="flex justify-between">
@@ -222,7 +222,7 @@ const CardPages = () => {
           </div>
         </div>
 
-        <div className="card w-96 bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
+        <div className="mx-4 card max-w-sm bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
           <div className="card-body">
             <div className="flex justify-between">
               <h2 className="text-xl font-bold">Premium</h2>
@@ -391,7 +391,7 @@ const CardPages = () => {
           </div>
         </div>
 
-        <div className="card w-96 bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
+        <div className="mx-4 card max-w-sm bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
           <div className="card-body">
             <div className="flex justify-between">
               <h2 className="text-xl font-bold">Premium</h2>
