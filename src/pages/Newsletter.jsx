@@ -8,9 +8,9 @@ const Newsletter = () => {
         <h1 className="text-xl md:text-3xl font-bold text-black pb-4">
           Biar gak ketinggalan update..
         </h1>
-        <p className="text-sm md:text-md font-semibold text-gray-500">
-          Subscribe Newsletter Petani Kode agar kamu bisa dapat info dan tips
-          belajar coding langsung dikirim ke emailmu?
+        <p className="text-sm md:text-md md:font-semibold text-gray-500">
+          Subscribe Newsletter Creative Course agar kamu bisa dapat info dan
+          tips belajar coding langsung dikirim ke emailmu?
         </p>
         <button className="btn bg-purple-600 text-white mt-8 w-[300px] md:w-[350px]">
           Let's Join
