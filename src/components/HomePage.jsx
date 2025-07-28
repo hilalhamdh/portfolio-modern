@@ -6,7 +6,7 @@ import CountUp from "react-countup";
 import CardPages from "../pages/CardPages";
 import Footer from "./Footer";
 import Kategori from "./Kategori";
-
+import { SlBasketLoaded } from "react-icons/sl";
 import Newsletter from "../pages/Newsletter";
 
 const HomePage = () => {
@@ -46,6 +46,7 @@ const HomePage = () => {
 
             <div className="flex items-center space-x-4">
               {/* Desktop Login Button */}
+              <SlBasketLoaded size={30} />
               <div className="hidden md:block">
                 <Link
                   to="/login"

@@ -51,7 +51,7 @@ const CardPages = () => {
         </div>
       </div>
       <div className=" md:flex  gap-4 grid grid-col-1 md:grid-col-3">
-        <div className="mx-4 card max-w-sm bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
+        <div className="mx-2 card max-w-sm bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
           <div className="card-body">
             <span className="badge badge-xs badge-warning">Most Popular</span>
             <div className="flex justify-between">
@@ -222,7 +222,7 @@ const CardPages = () => {
           </div>
         </div>
 
-        <div className="mx-4 card max-w-sm bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
+        <div className="mx-2 card max-w-sm bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
           <div className="card-body">
             <div className="flex justify-between">
               <h2 className="text-xl font-bold">Premium</h2>
@@ -391,7 +391,7 @@ const CardPages = () => {
           </div>
         </div>
 
-        <div className="mx-4 card max-w-sm bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
+        <div className="mx-2 card max-w-sm bg-white shadow-sm border-gray-200 border-2  rounded-xl ">
           <div className="card-body">
             <div className="flex justify-between">
               <h2 className="text-xl font-bold">Premium</h2>
