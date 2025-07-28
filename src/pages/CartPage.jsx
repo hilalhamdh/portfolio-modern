@@ -48,7 +48,7 @@ const CartPage = () => {
           </div>
         </header>
       </div>
-      <div className="max-w-4xl mx-auto p-6 mt-10">
+      <div className="max-w-4xl mx-auto p-6 mt-10 text-black">
         <h1 className="text-3xl font-bold mb-6">🛒 Keranjang Belanja</h1>
 
         {cartItems.length === 0 ? (
