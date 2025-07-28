@@ -15,7 +15,7 @@ const CartPage = () => {
       .map((item) => `- ${item.name} (Rp ${item.harga})`)
       .join("\n")}\n\nTotal: Rp ${total}`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/6281234567890?text=${encodedMessage}`, "_blank");
+    window.open(`https://wa.me/6282326065654text=${encodedMessage}`, "_blank");
   };
 
   return (
