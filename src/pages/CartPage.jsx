@@ -8,14 +8,26 @@ const CartPage = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
+  const totalHarga = cartItems.reduce((total, item) => {
+    return total + Number(item.harga.replace(".", ""));
+  }, 0);
+
+  // Format ke format Rupiah
+  const formatRupiah = (angka) => {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+    }).format(angka);
+  };
+
   const total = cartItems.reduce((sum, item) => sum + parseInt(item.harga), 0);
 
   const handleCheckout = () => {
     const message = `Halo, saya ingin membeli:\n\n${cartItems
       .map((item) => `- ${item.name} (Rp ${item.harga})`)
-      .join("\n")}\n\nTotal: Rp ${total}`;
+      .join("\n")}\n\nTotal: ${formatRupiah(totalHarga)}`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/6282326065654text=${encodedMessage}`, "_blank");
+    window.open(`https://wa.me/6282326065654?text=${encodedMessage}`, "_blank");
   };
 
   return (
@@ -98,17 +110,20 @@ const CartPage = () => {
             </div>
 
             <div className="flex justify-between items-center mt-6">
-              <p className="text-lg font-semibold">Total: Rp {total}</p>
+              <p className="text-xs md:text-lg font-semibold">
+                {" "}
+                Total: {formatRupiah(totalHarga)}
+              </p>
               <div className="flex gap-4">
                 <button
                   onClick={() => dispatch(clearCart())}
-                  className="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300"
+                  className=" hidden md:block bg-gray-200 text-gray-700 text-xs md:text-sm px-2 md:px-4 py-2 rounded hover:bg-gray-300"
                 >
                   Kosongkan
                 </button>
                 <button
                   onClick={handleCheckout}
-                  className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+                  className="bg-green-500 text-white text-xs md:text-sm px-2 md:px-4 py-2 rounded hover:bg-green-600"
                 >
                   Checkout via WhatsApp
                 </button>
