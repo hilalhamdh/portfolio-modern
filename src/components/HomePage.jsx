@@ -46,7 +46,10 @@ const HomePage = () => {
 
             <div className="flex items-center space-x-4">
               {/* Desktop Login Button */}
-              <SlBasketLoaded size={30} />
+              <Link to="cartpages">
+                <SlBasketLoaded size={30} />
+              </Link>
+
               <div className="hidden md:block">
                 <Link
                   to="/login"

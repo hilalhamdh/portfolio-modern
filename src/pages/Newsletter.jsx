@@ -13,7 +13,7 @@ const Newsletter = () => {
           belajar coding langsung dikirim ke emailmu?
         </p>
         <button className="btn bg-purple-600 text-white mt-8 w-[300px] md:w-[350px]">
-          Beli Paket
+          Let's Join
         </button>
       </div>
     </div>

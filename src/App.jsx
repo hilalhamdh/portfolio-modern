@@ -8,6 +8,7 @@ import Index from "./components/Index";
 import VideoPages from "./pages/VideoPages";
 import ForgotPassword from "./LoginPages/ForgotPassword";
 import MateriPages from "./pages/MateriPages";
+import CartPage from "./pages/CartPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/home" element={<Index />} />
           <Route path="/videopage" element={<VideoPages />} />
           <Route path="/forgotpass" element={<ForgotPassword />} />
+          <Route path="/cartpages" element={<CartPage />} />
         </Routes>
       </Router>
     </div>
