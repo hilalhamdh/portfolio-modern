@@ -78,16 +78,21 @@ const Pesan = () => {
 
   return (
     <div className="max-w-5xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Pesan Pengunjung</h1>
+      <h1 className="text-2xl font-bold mb-4 text-purple-600 ">
+        Pesan Pengunjung
+      </h1>
 
       {pesanList.length === 0 ? (
-        <p>Belum ada pesan.</p>
+        <p className="text-gray-600">Belum ada pesan.</p>
       ) : (
         <div className="grid gap-4">
           {pesanList.map((item) => (
-            <div key={item.id} className="p-3 bg-white rounded shadow">
+            <div
+              key={item.id}
+              className="p-3 bg-white rounded shadow border-gray-600"
+            >
               <p className="font-semibold">{item.nama}</p>
-              <p>{item.pesan}</p>
+              <p className="text-gray-700">{item.pesan}</p>
             </div>
           ))}
         </div>
