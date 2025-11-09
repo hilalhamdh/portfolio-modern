@@ -17,39 +17,37 @@ function DasarHtml() {
   return (
     <>
       {/* Navbar */}
-      <div className="p-4 bg-gray-200 shadow-md sticky top-0 z-50">
+      <div className="md:px-25 p-4 bg-purple-50 fixed top-0 w-full z-50 shadow-md">
+        {" "}
+        {/* <--- Perubahan Kunci: fixed top-0 w-full z-50 */}
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <div className="flex items-center">
             <img
+              onClick={handleItemClik}
               src="/logo.png"
               alt="Logo"
-              className="w-10 h-10 rounded-full"
+              className="w-10 h-10 rounded-full cursor-pointer "
             />
-            <h2
-              onClick={handleItemClik}
-              className="text-xl font-bold pl-3 text-sky-950 cursor-pointer"
-            >
+            <h2 className="text-xl font-bold pl-3 text-purple-800">
               Creative Course
             </h2>
           </div>
+          <div>
+            <ul className="hidden md:flex items-center gap-6 cursor-pointer">
+              <li className="text-purple-800 text-md font-semibold hover:text-purple-600">
+                Product
+              </li>
+              <li className="text-purple-800 text-md font-semibold hover:text-purple-600">
+                About
+              </li>
+            </ul>
+          </div>
 
-          {/* Menu Desktop */}
-          <ul className="hidden md:flex items-center gap-6 cursor-pointer">
-            <li className="text-sky-950 text-md font-semibold hover:text-sky-700 transition">
-              Product
-            </li>
-            <li className="text-sky-950 text-md font-semibold hover:text-sky-700 transition">
-              About
-            </li>
-          </ul>
-
-          {/* Right Section */}
           <div className="flex items-center space-x-4">
-            {/* Cart */}
-            <div className="relative">
+            {/* Desktop Login Button */}
+            <div className="relative text-purple-800">
               <Link to="cartpages">
-                <SlBasketLoaded size={28} className="text-gray-700" />
+                <SlBasketLoaded size={30} />
                 {cartItems.length > 0 && (
                   <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
                     {cartItems.length}
@@ -58,57 +56,55 @@ function DasarHtml() {
               </Link>
             </div>
 
-            {/* Login Button */}
             <div className="hidden md:block">
               <Link
                 to="/login"
-                className="bg-sky-950 text-white px-6 py-2 rounded hover:bg-sky-700 transition-all"
+                className="bg-purple-700 text-white px-6 py-2 rounded hover:bg-purple-500 transition-all"
               >
                 Member
               </Link>
             </div>
 
-            {/* Toggle Button Mobile */}
+            {/* Toggle Button */}
             <div className="md:hidden">
               {toggle ? (
                 <TfiClose
                   onClick={() => setToggle(false)}
-                  className="w-6 h-6 cursor-pointer text-gray-700"
+                  className="w-6 h-6 cursor-pointer text-purple-800"
                 />
               ) : (
                 <TfiAlignJustify
                   onClick={() => setToggle(true)}
-                  className="w-6 h-6 cursor-pointer text-gray-700"
+                  className="w-6 h-6 cursor-pointer text-purple-800"
                 />
               )}
             </div>
           </div>
         </div>
-
-        {/* Mobile Menu */}
+        {/* Toggle Menu Mobile */}
         {toggle && (
-          <div className="flex flex-col bg-gray-300 p-4 mt-3 rounded-md md:hidden">
+          <div className="flex flex-col bg-purple-100 p-4 mt-3 rounded shadow-md md:hidden">
             <Link
               to="/product"
-              className="bg-sky-950 text-white px-4 py-2 rounded hover:bg-sky-700 mb-2 transition"
+              className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-500 transition mb-2"
             >
               Product
             </Link>
             <Link
               to="/about"
-              className="bg-sky-950 text-white px-4 py-2 rounded hover:bg-sky-700 mb-2 transition"
+              className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-500 transition mb-2"
             >
               About
             </Link>
             <Link
               to="/login"
-              className="bg-sky-950 text-white px-4 py-2 rounded hover:bg-sky-700 mb-2 transition"
+              className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-500 transition mb-2"
             >
               Login
             </Link>
             <Link
               to="/register"
-              className="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300 transition"
+              className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-500 transition mb-2"
             >
               Register
             </Link>

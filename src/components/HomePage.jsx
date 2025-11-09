@@ -28,7 +28,9 @@ const HomePage = () => {
         }}
       >
         {/* Navbar */}
-        <div className="md:px-25 p-4 bg-gray-200">
+        <div className="md:px-25 p-4 bg-purple-50 fixed top-0 w-full z-50 shadow-md">
+          {" "}
+          {/* <--- Perubahan Kunci: fixed top-0 w-full z-50 */}
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <img
@@ -36,16 +38,16 @@ const HomePage = () => {
                 alt="Logo"
                 className="w-10 h-10 rounded-full"
               />
-              <h2 className="text-xl font-bold pl-3 text-sky-950">
+              <h2 className="text-xl font-bold pl-3 text-purple-800">
                 Creative Course
               </h2>
             </div>
             <div>
               <ul className="hidden md:flex items-center gap-6 cursor-pointer">
-                <li className="text-sky-950 text-md font-semibold hover:text-sky-700">
+                <li className="text-purple-800 text-md font-semibold hover:text-purple-600">
                   Product
                 </li>
-                <li className="text-sky-950 text-md font-semibold hover:text-sky-700">
+                <li className="text-purple-800 text-md font-semibold hover:text-purple-600">
                   About
                 </li>
               </ul>
@@ -53,7 +55,7 @@ const HomePage = () => {
 
             <div className="flex items-center space-x-4">
               {/* Desktop Login Button */}
-              <div className="relative">
+              <div className="relative text-purple-800">
                 <Link to="cartpages">
                   <SlBasketLoaded size={30} />
                   {cartItems.length > 0 && (
@@ -67,7 +69,7 @@ const HomePage = () => {
               <div className="hidden md:block">
                 <Link
                   to="/login"
-                  className="bg-sky-950 text-white px-6 py-2 rounded hover:bg-sky-700 transition-all"
+                  className="bg-purple-700 text-white px-6 py-2 rounded hover:bg-purple-500 transition-all"
                 >
                   Member
                 </Link>
@@ -78,50 +80,47 @@ const HomePage = () => {
                 {toggle ? (
                   <TfiClose
                     onClick={() => setToggle(false)}
-                    className="w-6 h-6 cursor-pointer"
+                    className="w-6 h-6 cursor-pointer text-purple-800"
                   />
                 ) : (
                   <TfiAlignJustify
                     onClick={() => setToggle(true)}
-                    className="w-6 h-6 cursor-pointer"
+                    className="w-6 h-6 cursor-pointer text-purple-800"
                   />
                 )}
               </div>
             </div>
           </div>
-
           {/* Toggle Menu Mobile */}
-
           {toggle && (
-            <div className="flex flex-col bg-gray-300 p-4 mt-3 rounded shadow-md md:hidden">
+            <div className="flex flex-col bg-purple-100 p-4 mt-3 rounded shadow-md md:hidden">
               <Link
                 to="/product"
-                className="bg-sky-950 text-white px-4 py-2 rounded hover:bg-sky-700 transition mb-2"
+                className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-500 transition mb-2"
               >
                 Product
               </Link>
               <Link
                 to="/about"
-                className="bg-sky-950 text-white px-4 py-2 rounded hover:bg-sky-700 transition mb-2"
+                className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-500 transition mb-2"
               >
                 About
               </Link>
               <Link
                 to="/login"
-                className="bg-sky-950 text-white px-4 py-2 rounded hover:bg-sky-700 transition mb-2"
+                className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-500 transition mb-2"
               >
                 Login
               </Link>
               <Link
                 to="/register"
-                className="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300 transition"
+                className="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-500 transition mb-2"
               >
                 Register
               </Link>
             </div>
           )}
         </div>
-
         {/* Hero Content */}
         <div className="flex flex-col mx-5  md:mx-50 ">
           <h1 className="text-4xl font-bold mb-2 pt-25 text-white">
