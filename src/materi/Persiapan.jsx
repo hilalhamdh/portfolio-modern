@@ -78,12 +78,12 @@ function Persiapan() {
               {toggle ? (
                 <TfiClose
                   onClick={() => setToggle(false)}
-                  className="w-6 h-6 cursor-pointer"
+                  className="w-6 h-6 cursor-pointer text-gray-700"
                 />
               ) : (
                 <TfiAlignJustify
                   onClick={() => setToggle(true)}
-                  className="w-6 h-6 cursor-pointer"
+                  className="w-6 h-6 cursor-pointer text-gray-700"
                 />
               )}
             </div>
