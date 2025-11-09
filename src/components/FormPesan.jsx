@@ -38,14 +38,14 @@ const FormPesan = () => {
         placeholder="Nama"
         value={nama}
         onChange={(e) => setNama(e.target.value)}
-        className="w-full p-2 border border-gray-600 rounded mb-2"
+        className="w-full p-2 border text-gray-700 border-gray-600 rounded mb-2"
       />
 
       <textarea
         placeholder="Pesan..."
         value={pesan}
         onChange={(e) => setPesan(e.target.value)}
-        className="w-full p-2 border border-gray-600 rounded mb-2"
+        className="w-full p-2 border text-gray-700 border-gray-600 rounded mb-2"
       ></textarea>
 
       <button
