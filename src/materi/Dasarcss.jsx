@@ -122,7 +122,7 @@ function Dasarcss() {
       </div>
 
       {/* Konten */}
-      <div className="flex flex-col lg:flex-row gap-6 px-4 md:px-8 lg:px-16 py-8 text-gray-500">
+      <div className="flex flex-col lg:flex-row gap-6 px-4 md:px-8 lg:px-16 py-8 text-gray-700">
         {/* Kiri - Materi */}
         <div className="w-full lg:w-2/3 px-4 md:px-8 lg:px-12 mt-5 shadow-2xl  border-white border-4 rounded-xl bg-white">
           {/* Header Author */}

@@ -127,7 +127,7 @@ function DasarHtml() {
             <p className="text-xs text-gray-500 font-bold">10 Mei 2025</p>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-700">
             🌐 Apa Itu HTML (HyperText Markup Language)?
           </h1>
           <div className="border-b-2 border-gray-400 my-3"></div>
@@ -138,7 +138,7 @@ function DasarHtml() {
             alt="HTML"
           />
 
-          <div className="mt-8 leading-relaxed text-gray-800 text-justify text-sm sm:text-base">
+          <div className="mt-8 leading-relaxed text-gray-700 text-justify text-sm sm:text-base">
             {/* Section 1 */}
             <p className="text-lg font-semibold">🧩 1. Pengertian HTML</p>
             <p className="mt-3">
@@ -294,7 +294,7 @@ function DasarHtml() {
 
           {/* Artikel Terbaru */}
           <div>
-            <p className="text-xl font-bold border-b-2 border-gray-400 pb-2">
+            <p className="text-xl font-bold border-b-2 border-gray-400 pb-2 text-gray-700">
               📰 Artikel Terbaru
             </p>
             <div className="mt-4 flex flex-col gap-3">

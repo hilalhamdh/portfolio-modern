@@ -133,7 +133,7 @@ function Persiapan() {
             <p className="text-xs text-gray-500 font-bold">10 Mei 2025</p>
           </div>
 
-          <h1 className="text-xl md:text-3xl font-bold mt-4 text-gray-500">
+          <h1 className="text-xl md:text-3xl font-bold mt-4 text-gray-700">
             🧰 Perangkat dan Perangkat Lunak yang Diperlukan
           </h1>
           <div className="border-b-2 border-gray-400 mt-2 mb-4"></div>
@@ -145,7 +145,7 @@ function Persiapan() {
           />
 
           {/* Materi */}
-          <div className="mt-10 leading-relaxed text-justify space-y-6 text-gray-500">
+          <div className="mt-10 leading-relaxed text-justify space-y-6 text-gray-700">
             <section>
               <h2 className="text-md font-bold mt-6">
                 💻 1. Komputer / Laptop
@@ -162,7 +162,7 @@ function Persiapan() {
               </ul>
             </section>
 
-            <section className="text-gray-500">
+            <section className="text-gray-700">
               <h2 className="text-md font-bold mt-16">
                 🧑‍💻 2. Teks Editor (Code Editor)
               </h2>
@@ -220,7 +220,7 @@ function Persiapan() {
               </div>
             </section>
 
-            <section className="text-gray-500">
+            <section className="text-gray-700">
               <h2 className="text-md font-bold mt-16">
                 ⚙️ 3. Instalasi VS Code
               </h2>
@@ -244,7 +244,7 @@ function Persiapan() {
                 </li>
               </ol>
             </section>
-            <section className="text-gray-500">
+            <section className="text-gray-700">
               <h2 className="text-md font-bold mt-16 ">
                 🧩 4. Pasang Ekstensi Penting di VS Code
               </h2>
@@ -311,7 +311,7 @@ function Persiapan() {
               </div>
             </section>
 
-            <section className="text-gray-500">
+            <section className="text-gray-700">
               <h2 className="text-md font-bold mt-16">
                 🌐 5. Browser Web (untuk Preview)
               </h2>
@@ -357,7 +357,7 @@ function Persiapan() {
               </div>
             </section>
 
-            <section className="text-gray-500">
+            <section className="text-gray-700">
               <h2 className="text-md font-bold mt-16">
                 📁 6. Struktur Folder Awal Proyek
               </h2>
@@ -381,7 +381,7 @@ function Persiapan() {
               </pre>
             </section>
 
-            <section className="text-gray-500">
+            <section className="text-gray-700">
               <h2 className="text-md font-bold mt-16">
                 🧠 7. Dasar-Dasar yang Perlu Diketahui Sebelum Koding
               </h2>
@@ -445,7 +445,7 @@ function Persiapan() {
               </div>
             </section>
 
-            <section className="text-gray-500">
+            <section className="text-gray-700">
               <h2 className="text-md font-bold mt-16">
                 🚀 8. Langkah Praktik Pertama
               </h2>
@@ -475,7 +475,7 @@ function Persiapan() {
               </ol>
             </section>
 
-            <section className="text-gray-500">
+            <section className="text-gray-700">
               <h2 className="text-md font-bold mt-16">
                 🧩 9. (Opsional) - Instalasi Pendukung Jika Kamu Lanjut ke Level
                 Lanjutan
@@ -496,7 +496,7 @@ function Persiapan() {
               </p>
             </section>
 
-            <section className="text-gray-500">
+            <section className="text-gray-700">
               <h2 className="text-md font-bold mt-16">🎯 Kesimpulan</h2>
 
               <div className="w-full overflow-x-auto mb-4 mt-3 ">
@@ -558,7 +558,7 @@ function Persiapan() {
         <div className="w-full lg:w-1/3 mt-5 space-y-8">
           {/* Newsletter */}
           <div className="shadow-2xl rounded-2xl p-6 bg-white">
-            <p className="font-bold text-2xl text-gray-500">📫 Newsletter</p>
+            <p className="font-bold text-2xl text-gray-700">📫 Newsletter</p>
             <p className="pt-5 text-md text-gray-500">
               Mau dapat tips belajar coding, info teknologi, dan perkembangan
               karir sebagai programmer?
