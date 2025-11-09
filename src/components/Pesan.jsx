@@ -32,12 +32,27 @@ const Pesan = () => {
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       if (!snapshot.empty) {
-        const data = snapshot.docs.map((doc) => ({
+        const newData = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
-        setPesanList(data);
-        localStorage.setItem("pesanList", JSON.stringify(data));
+
+        // Gabungkan data lama dengan data baru dari Firebase tanpa duplikat
+        setPesanList((prevList) => {
+          const merged = [...prevList];
+          newData.forEach((item) => {
+            if (!merged.some((p) => p.id === item.id)) {
+              merged.push(item);
+            }
+          });
+
+          // urutkan lagi berdasarkan createdAt desc
+          merged.sort((a, b) => b.createdAt?.seconds - a.createdAt?.seconds);
+
+          localStorage.setItem("pesanList", JSON.stringify(merged));
+          return merged;
+        });
+
         setLastDoc(snapshot.docs[snapshot.docs.length - 1]);
       } else {
         setIsEnd(true);
@@ -65,9 +80,15 @@ const Pesan = () => {
         id: doc.id,
         ...doc.data(),
       }));
-      const updatedList = [...pesanList, ...moreData];
-      setPesanList(updatedList);
-      localStorage.setItem("pesanList", JSON.stringify(updatedList));
+
+      setPesanList((prevList) => {
+        const updatedList = [...prevList, ...moreData].filter(
+          (v, i, a) => a.findIndex((t) => t.id === v.id) === i // hilangkan duplikat
+        );
+        localStorage.setItem("pesanList", JSON.stringify(updatedList));
+        return updatedList;
+      });
+
       setLastDoc(snapshot.docs[snapshot.docs.length - 1]);
     } else {
       setIsEnd(true);
@@ -83,15 +104,13 @@ const Pesan = () => {
     const totalScrollWidth = container.scrollWidth - container.clientWidth;
     const scrollLeft = container.scrollLeft;
 
-    if (totalScrollWidth === 0) {
-      setScrollProgress(0);
-    } else {
-      setScrollProgress((scrollLeft / totalScrollWidth) * 100);
-    }
+    setScrollProgress(
+      totalScrollWidth ? (scrollLeft / totalScrollWidth) * 100 : 0
+    );
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-4 mt-10">
+    <div className="max-w-3xl mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6 text-purple-600 text-center">
         Pesan Pengunjung
       </h1>
@@ -100,7 +119,6 @@ const Pesan = () => {
         <p className="text-gray-500 text-center text-lg">Belum ada pesan.</p>
       ) : (
         <div className="relative">
-          {/* Carousel */}
           <div
             ref={carouselRef}
             onScroll={handleScroll}
@@ -117,12 +135,9 @@ const Pesan = () => {
                   hover:scale-105 transition-transform
                 "
               >
-                {/* Pesan */}
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
                   “{item.pesan}”
                 </p>
-
-                {/* Nama di kiri */}
                 <p className="text-purple-700 font-semibold text-left">
                   -- {item.nama}
                 </p>
@@ -130,7 +145,6 @@ const Pesan = () => {
             ))}
           </div>
 
-          {/* Scroll progress bar */}
           <div className="h-1 bg-gray-300 rounded-full mt-2 w-full">
             <div
               className="h-1 bg-purple-500 rounded-full transition-all duration-300"
