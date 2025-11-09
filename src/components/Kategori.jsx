@@ -1,6 +1,13 @@
 import { card } from "../../data";
+import { useNavigate } from "react-router-dom";
 
 const Kategori = () => {
+  const navigate = useNavigate(); // Hook untuk navigasi
+
+  const handleCardClick = (slug) => {
+    // Navigasi ke halaman sesuai dengan slug (path)
+    navigate(`/${slug}`);
+  };
   return (
     <div className="mt-16 bg-gray-white bg-white text-black mx-2  md:mx-25 pb-3">
       <div className="">
@@ -15,9 +22,12 @@ const Kategori = () => {
           {card.map((item) => (
             <div
               key={item.id}
-              className="  bg-white shadow-sm border-gray-200 border-2  rounded-xl   transition-all ease-in-out hover:scale-110 "
+              className="bg-white shadow-sm border-gray-200 border-2  rounded-xl   transition-all ease-in-out hover:scale-110 "
+              onClick={() =>
+                handleCardClick(item.title.toLowerCase().replace(/\s+/g, "-"))
+              }
             >
-              <div className="p-4  ">
+              <div className="p-4">
                 <img
                   src={item.image}
                   className="w-full h-45 object-cover rounded-sm"

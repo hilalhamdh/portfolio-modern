@@ -13,13 +13,14 @@ import {
 } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { BiLogOut } from "react-icons/bi";
+import Footer from "./Footer";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [query, setQuery] = useState("");
 
   return (
-    <div className="">
+    <div>
       <div className="flex  justify-between items-center border-b-1 h-20 border-b-white shadow-lg  bg-gray-200">
         <div className="md:hidden absolute  top-7  mx-2 ">
           {!toggle ? (
@@ -102,6 +103,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

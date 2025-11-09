@@ -9,11 +9,11 @@ const Footer = () => {
       gambar: "/Facebook.png",
     },
     {
-      id: 1,
+      id: 3,
       gambar: "Instagram.png",
     },
     {
-      id: 1,
+      id: 4,
       gambar: "/LinkedIn.png",
     },
   ];

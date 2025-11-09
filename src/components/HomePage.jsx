@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { TfiAlignJustify, TfiClose } from "react-icons/tfi";
 import { Link } from "react-router-dom";
-// import Hilal from "../path/to/hilal.jpg"; // Pastikan kamu sudah import ini
 import CountUp from "react-countup";
 import CardPages from "../pages/CardPages";
 import Footer from "./Footer";
@@ -9,15 +8,18 @@ import Kategori from "./Kategori";
 import { SlBasketLoaded } from "react-icons/sl";
 import Newsletter from "../pages/Newsletter";
 import { useSelector } from "react-redux";
+import Pesan from "./Pesan";
+import FormPesan from "./FormPesan";
+
 const HomePage = () => {
   const [toggle, setToggle] = useState(false); // default false agar menu tertutup
-  const [show, setShow] = useState(true);
+  // const [show, setShow] = useState(true);
   const cartItems = useSelector((state) => state.cart.items);
 
   return (
     <>
       <div
-        className="min-h-screen flex flex-col transition-all ease-in-out bg-white text-black "
+        className="min-h-screen flex flex-col transition-all object-cover rounded-md ease-in-out bg-white text-black "
         style={{
           backgroundImage: "url('/bg.jpg')",
           backgroundSize: "cover",
@@ -40,8 +42,12 @@ const HomePage = () => {
             </div>
             <div>
               <ul className="hidden md:flex items-center gap-6 cursor-pointer">
-                <li className="text-sky-950 text-md font-semibold">Product</li>
-                <li className="text-sky-950 text-md font-semibold">About</li>
+                <li className="text-sky-950 text-md font-semibold hover:text-sky-700">
+                  Product
+                </li>
+                <li className="text-sky-950 text-md font-semibold hover:text-sky-700">
+                  About
+                </li>
               </ul>
             </div>
 
@@ -135,7 +141,7 @@ const HomePage = () => {
             skillmu sekarang juga.
           </p>
         </div>
-        <div>
+        {/* <div>
           {show && (
             <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center px-4 z-50">
               <div className="max-w-3xl bg-white shadow-md rounded-lg p-10 text-center relative">
@@ -167,7 +173,7 @@ const HomePage = () => {
               </div>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
       <section className="py-16 px-4 bg-gray-100 text-black">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
@@ -221,7 +227,8 @@ const HomePage = () => {
       <Kategori />
       <CardPages />
       <Newsletter />
-
+      <Pesan />
+      <FormPesan />
       <div className=" p-4 md:px-25 bg-white text-black ">
         <div className=" bg-gray-200 text-black collapse collapse-plus  border border-gray-200">
           <input type="radio" name="my-accordion-3" defaultChecked />

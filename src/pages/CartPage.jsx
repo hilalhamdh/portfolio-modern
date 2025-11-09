@@ -1,18 +1,26 @@
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart, clearCart } from "../redux/cartSlice";
+import {
+  // removeFromCart,
+  clearCart,
+  addToCart,
+  decreaseQuantity,
+} from "../redux/cartSlice";
 import { Link } from "react-router-dom";
 import { HiArrowLeft } from "react-icons/hi";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import Logo from "/robo.png";
+
 const CartPage = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
-  const totalHarga = cartItems.reduce((total, item) => {
-    return total + Number(item.harga.replace(".", ""));
-  }, 0);
+  // Hitung total harga dari semua item dikali quantity
+  const totalHarga = cartItems.reduce(
+    (total, item) => total + item.harga * item.quantity,
+    0
+  );
 
-  // Format ke format Rupiah
+  // Format angka ke mata uang Rupiah
   const formatRupiah = (angka) => {
     return new Intl.NumberFormat("id-ID", {
       style: "currency",
@@ -20,46 +28,47 @@ const CartPage = () => {
     }).format(angka);
   };
 
-  const total = cartItems.reduce((sum, item) => sum + parseInt(item.harga), 0);
-
+  // Kirim pesan ke WhatsApp
   const handleCheckout = () => {
     const message = `Halo, saya ingin membeli:\n\n${cartItems
-      .map((item) => `- ${item.name} (Rp ${item.harga})`)
+      .map(
+        (item) =>
+          `- ${item.name} (${item.quantity}x @Rp${item.harga.toLocaleString(
+            "id-ID"
+          )})`
+      )
       .join("\n")}\n\nTotal: ${formatRupiah(totalHarga)}`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/6282326065654?text=${encodedMessage}`, "_blank");
   };
 
   return (
-    <div className="bg-white">
-      <div>
-        <header className="bg-white shadow-md border-b sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            {/* Kiri: Logo + Judul */}
-            <div className="flex items-center gap-4">
-              <Link to="/">
-                <HiArrowLeft className="w-6 h-6 text-purple-600 object-contain" />
-              </Link>
-              <Link to="/">
-                <img
-                  src={Logo}
-                  alt="Logo"
-                  className="w-10 h-10 object-contain"
-                />
-              </Link>
-              <h1 className="text-xl md:text-2xl font-semibold text-gray-800">
-                Checkout
-              </h1>
-            </div>
-
-            {/* Kanan: Bantuan */}
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <AiOutlineQuestionCircle size={20} />
-              <span>Bantuan</span>
-            </div>
+    <div className="bg-white min-h-screen">
+      {/* Header */}
+      <header className="bg-white shadow-md border-b sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+          {/* Kiri: Logo + Judul */}
+          <div className="flex items-center gap-4">
+            <Link to="/">
+              <HiArrowLeft className="w-6 h-6 text-purple-600 object-contain" />
+            </Link>
+            <Link to="/">
+              <img src={Logo} alt="Logo" className="w-10 h-10 object-contain" />
+            </Link>
+            <h1 className="text-xl md:text-2xl font-semibold text-gray-800">
+              Checkout
+            </h1>
           </div>
-        </header>
-      </div>
+
+          {/* Kanan: Bantuan */}
+          <div className="flex items-center gap-2 text-sm text-gray-600">
+            <AiOutlineQuestionCircle size={20} />
+            <span>Bantuan</span>
+          </div>
+        </div>
+      </header>
+
+      {/* Isi Halaman */}
       <div className="max-w-4xl mx-auto p-6 mt-10 text-black">
         <h1 className="text-3xl font-bold mb-6">🛒 Keranjang Belanja</h1>
 
@@ -75,55 +84,77 @@ const CartPage = () => {
           </div>
         ) : (
           <>
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div className="bg-white shadow-md rounded-lg overflow-x-auto">
               <table className="min-w-full">
                 <thead className="bg-purple-100">
                   <tr>
                     <th className="py-3 px-4 text-left text-sm font-semibold">
                       Paket
                     </th>
-                    <th className="py-3 px-4 text-left text-sm font-semibold">
+                    {/* <th className="py-3 px-4 text-left text-sm font-semibold">
                       Harga
-                    </th>
+                    </th> */}
                     <th className="py-3 px-4 text-left text-sm font-semibold">
-                      Aksi
+                      Jumlah
                     </th>
+                    {/* <th className="py-3 px-4 text-left text-sm font-semibold">
+                      Aksi
+                    </th> */}
                   </tr>
                 </thead>
                 <tbody>
                   {cartItems.map((item) => (
                     <tr key={item.id} className="border-b">
                       <td className="py-3 px-4">{item.name}</td>
-                      <td className="py-3 px-4">Rp {item.harga}</td>
+                      {/* <td className="py-3 px-4">
+                        Rp {item.harga.toLocaleString("id-ID")}
+                      </td> */}
                       <td className="py-3 px-4">
+                        <div className="flex items-center gap-2">
+                          <button
+                            onClick={() => dispatch(decreaseQuantity(item.id))}
+                            className="px-2 bg-gray-200 rounded hover:bg-gray-300"
+                          >
+                            -
+                          </button>
+                          <span>{item.quantity}</span>
+                          <button
+                            onClick={() => dispatch(addToCart(item))}
+                            className="px-2 bg-gray-200 rounded hover:bg-gray-300"
+                          >
+                            +
+                          </button>
+                        </div>
+                      </td>
+                      {/* <td className="py-3 px-4">
                         <button
                           onClick={() => dispatch(removeFromCart(item.id))}
                           className="text-red-500 hover:text-red-700"
                         >
                           Hapus
                         </button>
-                      </td>
+                      </td> */}
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
 
-            <div className="flex justify-between items-center mt-6">
-              <p className="text-xs md:text-lg font-semibold">
-                {" "}
+            {/* Total dan Aksi */}
+            <div className="flex justify-between items-center mt-6 flex-wrap gap-4">
+              <p className="text-md font-semibold">
                 Total: {formatRupiah(totalHarga)}
               </p>
               <div className="flex gap-4">
                 <button
                   onClick={() => dispatch(clearCart())}
-                  className=" hidden md:block bg-gray-200 text-gray-700 text-xs md:text-sm px-2 md:px-4 py-2 rounded hover:bg-gray-300"
+                  className="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300"
                 >
                   Kosongkan
                 </button>
                 <button
                   onClick={handleCheckout}
-                  className="bg-green-500 text-white text-xs md:text-sm px-2 md:px-4 py-2 rounded hover:bg-green-600"
+                  className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
                 >
                   Checkout via WhatsApp
                 </button>

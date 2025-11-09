@@ -9,6 +9,12 @@ import VideoPages from "./pages/VideoPages";
 import ForgotPassword from "./LoginPages/ForgotPassword";
 import MateriPages from "./pages/MateriPages";
 import CartPage from "./pages/CartPage";
+import BasicProgramming from "./part/BasicProgramming";
+import WebProgramming from "./part/WebProgramming";
+import TutorialLain from "./part/TutorialLain";
+import DasarHtml from "./materi/DasarHtml";
+import Dasarcss from "./materi/Dasarcss";
+import Persiapan from "./materi/Persiapan";
 
 function App() {
   return (
@@ -24,6 +30,17 @@ function App() {
           <Route path="/videopage" element={<VideoPages />} />
           <Route path="/forgotpass" element={<ForgotPassword />} />
           <Route path="/cartpages" element={<CartPage />} />
+          <Route path="/cartpages" element={<CartPage />} />
+          <Route
+            path="/basic-programming"
+            element={<BasicProgramming />}
+          />{" "}
+          <Route path="/web-programming" element={<WebProgramming />} />{" "}
+          <Route path="/tutorial-lainnya" element={<TutorialLain />} />{" "}
+          <Route path="/materi/dasarhtml" element={<DasarHtml />} />
+          <Route path="/materi/persiapan" element={<Persiapan />} />
+          <Route path="/materi/dasarcss" element={<Dasarcss />} />
+          <Route path="/materi/dasarjs" element={<Dasarcss />} />
         </Routes>
       </Router>
     </div>
