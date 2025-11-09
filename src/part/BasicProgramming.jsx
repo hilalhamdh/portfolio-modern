@@ -50,7 +50,7 @@ function BasicProgramming() {
             {/* Cart */}
             <div className="relative">
               <Link to="cartpages">
-                <SlBasketLoaded size={30} />
+                <SlBasketLoaded size={30} className="text-gray-700" />
                 {cartItems.length > 0 && (
                   <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
                     {cartItems.length}
@@ -74,12 +74,12 @@ function BasicProgramming() {
               {toggle ? (
                 <TfiClose
                   onClick={() => setToggle(false)}
-                  className="w-6 h-6 cursor-pointer"
+                  className="w-6 h-6 cursor-pointer text-gray-700"
                 />
               ) : (
                 <TfiAlignJustify
                   onClick={() => setToggle(true)}
-                  className="w-6 h-6 cursor-pointer"
+                  className="w-6 h-6 cursor-pointer text-gray-700"
                 />
               )}
             </div>

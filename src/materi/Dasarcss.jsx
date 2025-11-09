@@ -54,7 +54,7 @@ function Dasarcss() {
             {/* Cart */}
             <div className="relative">
               <Link to="cartpages">
-                <SlBasketLoaded size={30} />
+                <SlBasketLoaded size={30} className="text-gray-700" />
                 {cartItems.length > 0 && (
                   <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
                     {cartItems.length}
@@ -78,12 +78,12 @@ function Dasarcss() {
               {toggle ? (
                 <TfiClose
                   onClick={() => setToggle(false)}
-                  className="w-6 h-6 cursor-pointer"
+                  className="w-6 h-6 cursor-pointer text-gray-700"
                 />
               ) : (
                 <TfiAlignJustify
                   onClick={() => setToggle(true)}
-                  className="w-6 h-6 cursor-pointer"
+                  className="w-6 h-6 cursor-pointer text-gray-700"
                 />
               )}
             </div>
@@ -122,9 +122,9 @@ function Dasarcss() {
       </div>
 
       {/* Konten */}
-      <div className="flex flex-col lg:flex-row gap-6 px-4 md:px-8 lg:px-16 py-8">
+      <div className="flex flex-col lg:flex-row gap-6 px-4 md:px-8 lg:px-16 py-8 text-gray-500">
         {/* Kiri - Materi */}
-        <div className="w-full lg:w-2/3 px-4 md:px-8 lg:px-12 mt-5 shadow-2xl border-white border-4 rounded-xl bg-white">
+        <div className="w-full lg:w-2/3 px-4 md:px-8 lg:px-12 mt-5 shadow-2xl  border-white border-4 rounded-xl bg-white">
           {/* Header Author */}
           <div className="flex items-center gap-2 pt-10">
             <img src="/hil.jpg" className="w-6 h-6 rounded-full" alt="Author" />
