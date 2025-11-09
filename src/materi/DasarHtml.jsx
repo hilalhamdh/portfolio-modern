@@ -117,7 +117,7 @@ function DasarHtml() {
       </div>
 
       {/* MAIN CONTENT */}
-      <div className="flex flex-col md:flex-row gap-6 px-4 sm:px-8 md:px-12 mt-10">
+      <div className="flex flex-col md:flex-row gap-6  sm:px-8 md:px-12 mt-10">
         {/* Artikel Utama */}
         <div className="w-full md:w-[70%] bg-white border border-gray-100 shadow-2xl rounded-xl p-6">
           <div className="flex items-center gap-2 mb-4">
@@ -282,7 +282,7 @@ function DasarHtml() {
         <div className="w-full md:w-[30%] flex flex-col gap-8">
           {/* Newsletter */}
           <div className="shadow-2xl rounded-2xl p-6 bg-white">
-            <p className="font-bold text-2xl">📫 Newsletter</p>
+            <p className="font-bold text-2xl text-gray-700">📫 Newsletter</p>
             <p className="pt-4 text-gray-500 text-sm sm:text-base">
               Mau dapat tips belajar coding, info teknologi, dan perkembangan
               karir sebagai programmer?

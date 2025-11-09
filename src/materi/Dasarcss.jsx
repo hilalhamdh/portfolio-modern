@@ -122,9 +122,9 @@ function Dasarcss() {
       </div>
 
       {/* Konten */}
-      <div className="flex flex-col lg:flex-row gap-6 px-4 md:px-8 lg:px-16 py-8 text-gray-700">
+      <div className="flex flex-col lg:flex-row gap-6  md:px-8 lg:px-16 py-8 text-gray-700">
         {/* Kiri - Materi */}
-        <div className="w-full lg:w-2/3 px-4 md:px-8 lg:px-12 mt-5 shadow-2xl  border-white border-4 rounded-xl bg-white">
+        <div className="w-full lg:w-2/3  md:px-8 lg:px-12 mt-5 shadow-2xl  border-white border-4 rounded-xl bg-white">
           {/* Header Author */}
           <div className="flex items-center gap-2 pt-10">
             <img src="/hil.jpg" className="w-6 h-6 rounded-full" alt="Author" />
@@ -133,7 +133,7 @@ function Dasarcss() {
             <p className="text-xs text-gray-500 font-bold">10 Mei 2025</p>
           </div>
 
-          <h1 className="text-3xl font-bold mt-4">
+          <h1 className="text-2xl md:text-3xl font-bold mt-4">
             🧩 Membuat Website Sederhana Dengan HTML & CSS
           </h1>
           <div className="border-b-2 border-gray-400 mt-2 mb-4"></div>
