@@ -91,7 +91,7 @@ const Pesan = () => {
               key={item.id}
               className="p-3 bg-white rounded shadow border-gray-600"
             >
-              <p className="font-semibold">{item.nama}</p>
+              <p className="font-semibold text-gray-700">{item.nama}</p>
               <p className="text-gray-700">{item.pesan}</p>
             </div>
           ))}
