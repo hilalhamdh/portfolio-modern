@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   db,
   collection,
@@ -18,9 +18,11 @@ const Pesan = () => {
   const [lastDoc, setLastDoc] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isEnd, setIsEnd] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const pageSize = 5;
 
-  // Load halaman pertama realtime
+  const carouselRef = useRef(null);
+
   useEffect(() => {
     const q = query(
       collection(db, "pesan"),
@@ -45,7 +47,6 @@ const Pesan = () => {
     return () => unsubscribe();
   }, []);
 
-  // Load halaman berikutnya
   const loadMore = async () => {
     if (!lastDoc || isEnd) return;
 
@@ -75,45 +76,76 @@ const Pesan = () => {
     setIsLoading(false);
   };
 
+  const handleScroll = () => {
+    const container = carouselRef.current;
+    if (!container) return;
+
+    const totalScrollWidth = container.scrollWidth - container.clientWidth;
+    const scrollLeft = container.scrollLeft;
+
+    if (totalScrollWidth === 0) {
+      setScrollProgress(0);
+    } else {
+      setScrollProgress((scrollLeft / totalScrollWidth) * 100);
+    }
+  };
+
   return (
-    <div className="max-w-5xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4 text-purple-600">
+    <div className="max-w-3xl mx-auto p-4 mt-10">
+      <h1 className="text-3xl font-bold mb-6 text-purple-600 text-center">
         Pesan Pengunjung
       </h1>
 
       {pesanList.length === 0 ? (
-        <p className="text-gray-600">Belum ada pesan.</p>
+        <p className="text-gray-500 text-center text-lg">Belum ada pesan.</p>
       ) : (
-        <div
-          className="
-            grid grid-cols-1 gap-4 
-            md:grid-cols-1 
-            lg:grid-cols-1 
-            sm:flex sm:flex-row sm:overflow-x-auto
-          "
-        >
-          {pesanList.map((item) => (
+        <div className="relative">
+          {/* Carousel */}
+          <div
+            ref={carouselRef}
+            onScroll={handleScroll}
+            className="flex overflow-x-auto snap-x snap-mandatory space-x-6 scrollbar-none pb-2"
+          >
+            {pesanList.map((item) => (
+              <div
+                key={item.id}
+                className="
+                  flex-shrink-0 w-full sm:w-80 md:w-96
+                  bg-white rounded-2xl shadow-lg p-6
+                  snap-center
+                  border border-gray-200
+                  hover:scale-105 transition-transform
+                "
+              >
+                {/* Pesan */}
+                <p className="text-gray-700 text-base leading-relaxed mb-6">
+                  “{item.pesan}”
+                </p>
+
+                {/* Nama di kiri */}
+                <p className="text-purple-700 font-semibold text-left">
+                  -- {item.nama}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Scroll progress bar */}
+          <div className="h-1 bg-gray-300 rounded-full mt-2 w-full">
             <div
-              key={item.id}
-              className="
-                min-w-[250px] flex-shrink-0 
-                p-3 bg-white rounded shadow border-gray-600 
-                sm:mr-4
-              "
-            >
-              <p className="font-semibold text-gray-700">{item.nama}</p>
-              <p className="text-gray-700">{item.pesan}</p>
-            </div>
-          ))}
+              className="h-1 bg-purple-500 rounded-full transition-all duration-300"
+              style={{ width: `${scrollProgress}%` }}
+            ></div>
+          </div>
         </div>
       )}
 
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-6">
         {!isEnd && (
           <button
             onClick={loadMore}
             disabled={isLoading}
-            className="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 disabled:bg-gray-400"
+            className="bg-purple-500 text-white px-5 py-2 rounded-lg hover:bg-purple-600 disabled:bg-gray-400 transition-colors"
           >
             {isLoading ? "Memuat..." : "Next"}
           </button>
